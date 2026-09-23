@@ -422,6 +422,8 @@
   }
   .cform-done.show { display: block; }
   .cform-err { color: var(--accent); font-size: .82rem; margin-top: 12px; display: none; }
+  .cform-legal { color: var(--muted-d); font-size: .75rem; margin-top: 14px; text-align: center; }
+  .cform-legal a { color: var(--muted-d); }
   @media (max-width: 560px) { .cform .row { grid-template-columns: 1fr; } }
 
   /* Footer */
@@ -762,6 +764,7 @@
       <input type="hidden" name="_subject" value="Diagnóstico digital — tunedgrowth.com">
       <input type="text" name="_honey" style="display:none">
       <button type="submit" class="btn btn-light" id="cf-submit">Solicitar diagnóstico gratuito</button>
+      <p class="cform-legal">Al enviar aceptas la <a href="/privacidad.html">política de privacidad</a> — solo usamos tus datos para responder a tu solicitud.</p>
       <p class="cform-err" id="cf-err">Algo ha fallado — escríbenos a hola@tunedgrowth.com</p>
     </form>
     <div class="cform-done" id="cf-done">
@@ -798,7 +801,7 @@
     </div>
     <div class="foot-bottom">
       <span>© 2026 Tuned Growth · Madrid</span>
-      <span>Aviso legal · Privacidad · Cookies</span>
+      <span><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a> · <a href="/cookies.html">Cookies</a></span>
     </div>
   </div>
 </footer>
