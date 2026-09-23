@@ -393,6 +393,37 @@
   .final .alt { margin-top: 24px; font-size: .86rem; color: var(--muted-d); }
   .final .alt a { color: var(--accent); text-decoration: none; }
 
+  /* Formulario de contacto — sobre fondo tinta */
+  .cform { max-width: 520px; margin: 0 auto; text-align: left; }
+  .cform .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .cform label {
+    display: block; font-family: var(--font-d); font-size: .68rem;
+    font-weight: 500; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--muted-d); margin: 0 0 8px;
+  }
+  .cform .field { margin-bottom: 16px; }
+  .cform input, .cform textarea {
+    width: 100%; padding: 13px 15px; font: inherit; font-size: .92rem;
+    color: var(--paper); background: rgba(250, 248, 242, .05);
+    border: 1px solid var(--line-d); border-radius: var(--radius);
+    transition: border-color .15s, background .15s;
+  }
+  .cform input:focus, .cform textarea:focus {
+    outline: none; border-color: var(--accent);
+    background: rgba(250, 248, 242, .09);
+  }
+  .cform input::placeholder, .cform textarea::placeholder { color: var(--muted-d); }
+  .cform textarea { resize: vertical; min-height: 110px; }
+  .cform .btn { width: 100%; }
+  .cform-done {
+    display: none; max-width: 520px; margin: 0 auto; padding: 28px 24px;
+    border: 1px solid var(--accent); border-radius: var(--radius);
+    font-family: var(--font-d); font-size: 1.05rem; color: var(--paper);
+  }
+  .cform-done.show { display: block; }
+  .cform-err { color: var(--accent); font-size: .82rem; margin-top: 12px; display: none; }
+  @media (max-width: 560px) { .cform .row { grid-template-columns: 1fr; } }
+
   /* Footer */
   footer { background: var(--ink); border-top: 1px solid var(--line-d); padding: 64px 0 36px; color: var(--muted-d); }
   .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 44px; }
@@ -703,7 +734,39 @@
   <div class="wrap">
     <h2>¿Hablamos de tu negocio?</h2>
     <p>Te preparamos un diagnóstico de tu presencia digital y una demo personalizada que puedes probar antes de decidir. Sin compromiso.</p>
-    <a class="btn btn-light" href="mailto:hola@tunedgrowth.com?subject=Diagnóstico%20digital">Solicitar diagnóstico gratuito</a>
+    <form class="cform" id="cform" action="https://formsubmit.co/ajax/hola@tunedgrowth.com" method="POST" novalidate>
+      <div class="row">
+        <div class="field">
+          <label for="cf-nombre">Nombre</label>
+          <input type="text" id="cf-nombre" name="nombre" required placeholder="Tu nombre">
+        </div>
+        <div class="field">
+          <label for="cf-negocio">Negocio</label>
+          <input type="text" id="cf-negocio" name="negocio" placeholder="Clínica, restaurante…">
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" required placeholder="tu@email.com">
+        </div>
+        <div class="field">
+          <label for="cf-tel">Teléfono</label>
+          <input type="tel" id="cf-tel" name="telefono" placeholder="600 000 000">
+        </div>
+      </div>
+      <div class="field">
+        <label for="cf-msg">¿Qué necesitas?</label>
+        <textarea id="cf-msg" name="mensaje" required placeholder="Web nueva, un asistente que responda por ti, más reservas…"></textarea>
+      </div>
+      <input type="hidden" name="_subject" value="Diagnóstico digital — tunedgrowth.com">
+      <input type="text" name="_honey" style="display:none">
+      <button type="submit" class="btn btn-light" id="cf-submit">Solicitar diagnóstico gratuito</button>
+      <p class="cform-err" id="cf-err">Algo ha fallado — escríbenos a hola@tunedgrowth.com</p>
+    </form>
+    <div class="cform-done" id="cf-done">
+      ✓ Recibido — te preparo el diagnóstico y te escribo en menos de 24h laborables.
+    </div>
     <p class="alt">O escríbenos a <a href="mailto:hola@tunedgrowth.com">hola@tunedgrowth.com</a></p>
   </div>
 </section>
@@ -745,6 +808,30 @@
     es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
   }, { threshold: .12 });
   document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+  // Formulario de contacto → hola@tunedgrowth.com (FormSubmit AJAX)
+  const cf = document.getElementById("cform");
+  if (cf) cf.addEventListener("submit", async e => {
+    e.preventDefault();
+    if (!cf.checkValidity()) { cf.reportValidity(); return; }
+    const btn = document.getElementById("cf-submit");
+    const err = document.getElementById("cf-err");
+    btn.disabled = true; btn.textContent = "Enviando…"; err.style.display = "none";
+    try {
+      const r = await fetch(cf.action, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(Object.fromEntries(new FormData(cf))),
+      });
+      const d = await r.json();
+      if (!r.ok || d.success === "false") throw new Error();
+      cf.style.display = "none";
+      document.getElementById("cf-done").classList.add("show");
+    } catch {
+      err.style.display = "block";
+      btn.disabled = false; btn.textContent = "Solicitar diagnóstico gratuito";
+    }
+  });
 </script>
 </body>
 </html>
