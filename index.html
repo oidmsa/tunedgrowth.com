@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tuned Growth — Consultoría de digitalización, IA y marketing</title>
+<title>Tuned Growth — Tu negocio puede hacer más. Sin hacer más tú.</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<meta name="description" content="Ayudamos a pymes a digitalizar su captación, atención y ventas: web, agentes de IA, WhatsApp, reservas y automatización.">
+<meta name="description" content="Automatizamos captación, atención, ventas y seguimiento para que tu negocio genere más reduciendo la carga de trabajo de tu equipo. Primero lo pruebas, después decides.">
 <style>
   :root {
     --paper: #f3f0e9;
@@ -25,7 +25,6 @@
     --accent-deep: #b53408;
     --accent-soft: rgba(224, 66, 10, .08);
     --moss: #1e4d3b;
-    --moss-deep: #163a2c;
     --radius: 4px;
     --font-d: "Space Grotesk", "Inter", sans-serif;
     --font-b: "Inter", -apple-system, "Segoe UI", sans-serif;
@@ -38,7 +37,6 @@
     color: var(--ink); background: var(--paper); line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
-  /* grano editorial sutil sobre toda la página */
   body::after {
     content: ""; position: fixed; inset: 0; z-index: 200;
     pointer-events: none; opacity: .05; mix-blend-mode: multiply;
@@ -55,25 +53,29 @@
     margin-bottom: 22px;
   }
   .eyebrow::before { content: ""; width: 26px; height: 1px; background: var(--accent); }
-  .dark .eyebrow, .agents .eyebrow, .final .eyebrow { color: var(--accent); }
 
   h1 {
     font-family: var(--font-d);
-    font-size: clamp(3rem, 8vw, 6.4rem);
-    line-height: .98; letter-spacing: -.04em; font-weight: 700;
+    font-size: clamp(2.9rem, 7vw, 5.6rem);
+    line-height: 1; letter-spacing: -.04em; font-weight: 700;
   }
   h2 {
     font-family: var(--font-d);
     font-size: clamp(2rem, 4.4vw, 3.2rem);
     line-height: 1.02; letter-spacing: -.03em; font-weight: 700; margin-bottom: 18px;
   }
-  .lead { color: var(--muted); font-size: 1.12rem; max-width: 600px; }
-  .dark .lead, .agents .lead, .final .lead { color: var(--muted-d); }
+  .lead { color: var(--muted); font-size: 1.12rem; max-width: 640px; }
+  .dark .lead { color: var(--muted-d); }
   .center { text-align: center; }
   .center .lead { margin: 0 auto; }
   .center .eyebrow { justify-content: center; }
-  /* acento editorial: itálica serif en vez de degradado */
   .grad-text { font-family: var(--font-s); font-style: italic; font-weight: 400; letter-spacing: -.01em; color: var(--accent); }
+  h1 .u {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: .07em;
+    text-underline-offset: .12em;
+  }
 
   .sec-num {
     font-family: var(--font-d);
@@ -82,26 +84,25 @@
     display: flex; align-items: center; gap: 16px;
   }
   .sec-num::after { content: ""; flex: 1; height: 1px; background: var(--line); }
-  .dark .sec-num, .agents .sec-num { color: var(--muted-d); }
-  .dark .sec-num::after, .agents .sec-num::after { background: var(--line-d); }
+  .dark .sec-num { color: var(--muted-d); }
+  .dark .sec-num::after { background: var(--line-d); }
 
   .btn {
     display: inline-block; font-family: var(--font-d); font-weight: 500;
     font-size: .8rem; letter-spacing: .14em; text-transform: uppercase;
     text-decoration: none; padding: 16px 30px; border-radius: var(--radius);
-    transition: background .18s ease, color .18s ease, border-color .18s ease;
+    transition: background .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;
     cursor: pointer; border: 1px solid transparent;
   }
+  .btn:hover { transform: translateY(-1px); }
   .btn-primary { background: var(--accent); color: #fff; }
   .btn-primary:hover { background: var(--accent-deep); }
-  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
-  .btn-ghost:hover { background: var(--ink); color: var(--paper); }
   .btn-light { background: var(--paper); color: var(--ink); }
   .btn-light:hover { background: #fff; }
   .btn-outline-d { background: transparent; color: var(--ink); border-color: var(--ink); }
   .btn-outline-d:hover { background: var(--ink); color: var(--paper); }
 
-  /* Nav — tinta sobre papel, hairline */
+  /* Nav */
   nav {
     position: sticky; top: 0; z-index: 60;
     background: rgba(243, 240, 233, .88);
@@ -115,11 +116,11 @@
     letter-spacing: -.02em; text-decoration: none; color: var(--ink);
   }
   .brand .mark {
-    width: 32px; height: 32px; border-radius: 0; background: var(--ink);
+    width: 32px; height: 32px; background: var(--ink);
     display: flex; align-items: center; justify-content: center;
     color: var(--paper); font-size: .95rem; font-weight: 700;
   }
-  .nav-links { display: flex; gap: 30px; margin-left: auto; }
+  .nav-links { display: flex; gap: 28px; margin-left: auto; }
   .nav-links a {
     color: var(--muted); text-decoration: none;
     font-size: .78rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
@@ -128,32 +129,64 @@
   .nav-in .btn { padding: 12px 22px; }
   @media (max-width: 840px) { .nav-links { display: none; } }
 
-  /* Hero — papel editorial, no dark */
-  .hero { background: var(--paper); color: var(--ink); padding: 130px 0 0; position: relative; }
-  .hero .wrap { position: relative; }
-  .hero .lead { margin: 28px 0 40px; font-size: 1.18rem; }
-  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
-  .hero-note { margin-top: 22px; font-size: .84rem; color: var(--muted); }
-  .hero-note b { color: var(--accent); }
-  .hero-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    border-top: 1px solid var(--line); margin-top: 90px;
+  /* Hero */
+  .hero { padding: 100px 0 0; }
+  .hero-in { display: grid; grid-template-columns: 1.1fr .9fr; gap: 70px; align-items: start; }
+  .hero .lead { margin: 28px 0 38px; font-size: 1.2rem; }
+  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .hero-note {
+    margin-top: 30px; max-width: 560px;
+    padding: 18px 22px;
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft); border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: .92rem; color: var(--muted); line-height: 1.55;
   }
-  .hero-grid > div { padding: 32px 28px 40px; border-left: 1px solid var(--line); }
-  .hero-grid > div:first-child { border-left: none; padding-left: 0; }
-  .hero-grid b {
+  .hero-note b {
+    display: block; font-family: var(--font-d); font-weight: 700;
+    font-size: 1.05rem; letter-spacing: -.01em; color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .hero-note strong { color: var(--ink); font-weight: 600; }
+  .hero-checks {
+    list-style: none; max-width: 560px;
+    padding: 34px 36px 10px; background: #fff;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: 10px 10px 0 rgba(23, 19, 16, .08);
+  }
+  .hero-checks li {
+    display: flex; gap: 14px; align-items: baseline;
+    padding: 13px 0; border-bottom: 1px solid var(--line);
+    font-size: .95rem; color: var(--ink-soft);
+  }
+  .hero-checks li::before { content: "✓"; color: var(--accent); font-weight: 700; flex: none; }
+  .hero-checks .while {
+    font-family: var(--font-d); font-size: .7rem; font-weight: 500;
+    letter-spacing: .18em; text-transform: uppercase; color: var(--muted);
+    padding-top: 20px; border-bottom: none;
+  }
+  .hero-checks .while::before { content: none; }
+  .hero-strip {
+    border-top: 1px solid var(--line); margin-top: 60px;
+    display: flex; flex-wrap: wrap;
+  }
+  .hero-strip > div {
+    flex: 1 1 200px; padding: 26px 28px 34px; border-left: 1px solid var(--line);
+    font-size: .84rem; color: var(--muted);
+  }
+  .hero-strip > div:first-child { border-left: none; padding-left: 0; }
+  .hero-strip b {
     display: block; font-family: var(--font-d);
-    font-size: 1.5rem; font-weight: 700; letter-spacing: -.02em;
+    font-size: 1.4rem; font-weight: 700; letter-spacing: -.02em; color: var(--ink);
   }
-  .hero-grid span { font-size: .84rem; color: var(--muted); }
-  @media (max-width: 720px) { .hero-grid > div { border-left: none; padding-left: 0; } }
+  @media (max-width: 720px) { .hero-strip > div { border-left: none; padding-left: 0; } }
+  @media (max-width: 940px) { .hero-in { grid-template-columns: 1fr; gap: 44px; } .hero-checks { max-width: none; } }
 
-  /* Marquee de sectores — hairlines, mono */
+  /* Marquee */
   .marquee {
     background: var(--ink); border-block: 1px solid var(--ink);
     overflow: hidden; padding: 16px 0; white-space: nowrap;
   }
-  .marquee-track { display: inline-flex; gap: 52px; animation: mq 30s linear infinite; }
+  .marquee-track { display: inline-flex; gap: 52px; animation: mq 24s linear infinite; }
   .marquee span {
     color: var(--muted-d); font-family: var(--font-d);
     font-size: .72rem; font-weight: 500;
@@ -164,110 +197,221 @@
   @keyframes mq { to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
 
-  /* Servicios — pilares numerados, editorial */
-  .pillars { display: grid; gap: 0; margin-top: 60px; }
-  .pillar {
-    display: grid; grid-template-columns: 110px 1fr 1.15fr; gap: 32px;
-    padding: 46px 0; border-top: 1px solid var(--line);
-    align-items: start;
+  /* Fugas */
+  .leaks { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; margin-top: 56px; border: 1px solid var(--line); }
+  .leak { padding: 34px 30px; border-left: 1px solid var(--line); }
+  .leak:first-child { border-left: none; }
+  .leak .flow { font-family: var(--font-d); font-size: .82rem; color: var(--ink-soft); line-height: 1.7; }
+  .leak .flow .x { color: var(--accent); font-weight: 700; }
+  .leak .tag {
+    display: inline-block; margin-top: 18px; padding: 4px 12px;
+    font-family: var(--font-d); font-size: .68rem; font-weight: 500;
+    letter-spacing: .16em; text-transform: uppercase;
+    background: var(--accent-soft); color: var(--accent); border-radius: 999px;
   }
-  .pillar:last-child { border-bottom: 1px solid var(--line); }
-  .pillar .pn {
-    font-family: var(--font-d); font-size: 3rem; font-weight: 700;
-    color: transparent; -webkit-text-stroke: 1px var(--muted);
-    letter-spacing: -.03em; line-height: 1;
+  .leak-resolve {
+    grid-column: 1/-1; padding: 26px 30px; border-top: 1px solid var(--line);
+    background: var(--moss); color: var(--paper);
+    font-family: var(--font-d); font-size: 1.05rem; letter-spacing: -.01em;
   }
-  .pillar:hover .pn { -webkit-text-stroke-color: var(--accent); }
-  .pillar h3 { font-family: var(--font-d); font-size: 1.45rem; letter-spacing: -.02em; margin-bottom: 10px; }
-  .pillar .pd { color: var(--muted); font-size: .96rem; }
-  .pillar ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
-  .pillar li { font-size: .88rem; color: var(--ink-soft); padding-left: 20px; position: relative; }
-  .pillar li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-weight: 600; }
-  @media (max-width: 860px) {
-    .pillar { grid-template-columns: 1fr; gap: 14px; }
-    .pillar .pn { font-size: 1.8rem; }
+  .leak-resolve b { color: #fff; }
+  @media (max-width: 860px) { .leak { border-left: none; border-top: 1px solid var(--line); } .leak:first-child { border-top: none; } }
+
+  /* Calculadora — sliders */
+  .roi-band { background: var(--ink); color: var(--paper); }
+  .roi-in { display: grid; grid-template-columns: 1.05fr .95fr; gap: 70px; align-items: start; }
+  .roi-band h2 { color: var(--paper); }
+  .roi-band .lead { color: var(--muted-d); }
+  .roi-form { margin-top: 40px; display: grid; gap: 26px; }
+  .roi-field label {
+    display: flex; justify-content: space-between; gap: 14px;
+    font-family: var(--font-d); font-size: .72rem; font-weight: 500;
+    letter-spacing: .16em; text-transform: uppercase; color: var(--muted-d);
+    margin-bottom: 10px;
+  }
+  .roi-field label output { color: var(--accent); font-size: .95rem; letter-spacing: 0; text-transform: none; font-weight: 700; }
+  .roi-field input[type="range"] {
+    width: 100%; appearance: none; height: 3px; border-radius: 3px;
+    background: var(--line-d); outline: none;
+  }
+  .roi-field input[type="range"]::-webkit-slider-thumb {
+    appearance: none; width: 20px; height: 20px; border-radius: 50%;
+    background: var(--accent); cursor: pointer; border: 3px solid var(--paper);
+  }
+  .roi-field input[type="range"]::-moz-range-thumb {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--accent); cursor: pointer; border: 3px solid var(--paper);
+  }
+  .roi-result {
+    background: var(--paper); color: var(--ink); border-radius: var(--radius);
+    padding: 44px 40px; position: sticky; top: 100px;
+    box-shadow: 10px 10px 0 rgba(224, 66, 10, .25);
+  }
+  .roi-result .rt {
+    font-family: var(--font-d); font-size: .7rem; font-weight: 500;
+    letter-spacing: .2em; text-transform: uppercase; color: var(--muted);
+  }
+  .roi-result .big {
+    font-family: var(--font-d); font-size: clamp(3rem, 6vw, 4.6rem);
+    font-weight: 700; letter-spacing: -.04em; color: var(--accent);
+    line-height: 1; margin: 14px 0 6px;
+  }
+  .roi-result .sub { font-size: .92rem; color: var(--muted); }
+  .roi-result .sub b { color: var(--ink); }
+  .roi-result .math {
+    margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line);
+    font-size: .8rem; color: var(--muted); line-height: 1.7;
+  }
+  .roi-result .btn { margin-top: 26px; width: 100%; text-align: center; }
+  .roi-disclaimer { margin-top: 14px; font-size: .72rem; color: var(--muted); }
+  @media (max-width: 860px) { .roi-in { grid-template-columns: 1fr; } .roi-result { position: static; } }
+
+  /* Journey — 6 fases */
+  .journey {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0; margin-top: 60px; border: 1px solid var(--line);
+  }
+  .jstep { padding: 34px 30px; border-left: 1px solid var(--line); border-top: 1px solid var(--line); transition: background .2s; }
+  .jstep:hover { background: #fff; }
+  .jstep .n { font-family: var(--font-d); font-size: .72rem; font-weight: 500; color: var(--accent); letter-spacing: .2em; }
+  .jstep h3 { font-family: var(--font-d); font-size: 1.25rem; margin: 12px 0 8px; letter-spacing: -.02em; }
+  .jstep p { color: var(--muted); font-size: .9rem; }
+  .journey-tag {
+    margin-top: 48px; padding: 30px 34px; background: var(--ink); color: var(--paper);
+    font-family: var(--font-d); font-size: clamp(1.15rem, 2.4vw, 1.6rem);
+    letter-spacing: -.02em; line-height: 1.4; border-radius: var(--radius);
+  }
+  .journey-tag b { color: var(--accent); }
+  @media (min-width: 940px) {
+    .jstep:nth-child(3n+1) { border-left: none; }
+    .jstep:nth-child(-n+3) { border-top: none; }
+  }
+  @media (max-width: 939px) and (min-width: 640px) {
+    .jstep:nth-child(odd) { border-left: none; }
+    .jstep:nth-child(-n+2) { border-top: none; }
+  }
+  @media (max-width: 639px) {
+    .jstep { border-left: none; }
+    .jstep:first-child { border-top: none; }
   }
 
-  /* Casos — métricas grandes, hairlines */
-  .cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0; margin-top: 56px; border: 1px solid var(--line); }
-  .case {
-    background: transparent; border: none;
-    border-left: 1px solid var(--line);
+  /* Diferenciación */
+  .demofirst { background: var(--paper-2); }
+  .df-in { max-width: 720px; margin: 0 auto; text-align: center; }
+  .df-in .lead { margin: 0 auto; }
+  .df-steps { margin: 34px auto; max-width: 560px; text-align: left; }
+  .df-steps div {
+    padding: 14px 0 14px 26px; position: relative;
+    font-size: .98rem; color: var(--ink-soft);
+    border-left: 1px solid var(--line); margin-left: 12px;
+  }
+  .df-steps div::before {
+    content: ""; position: absolute; left: -5px; top: 22px;
+    width: 9px; height: 9px; background: var(--accent);
+  }
+  .df-verdict { display: flex; gap: 14px; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
+  .df-verdict span {
+    font-family: var(--font-d); font-size: .95rem; letter-spacing: -.01em;
+    padding: 12px 24px; border: 1px solid var(--ink); border-radius: 999px;
+  }
+  .df-verdict span.yes { background: var(--ink); color: var(--paper); }
+
+  /* Tareas */
+  .tasks {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0; margin-top: 56px; border: 1px solid var(--line-d);
+  }
+  .task { padding: 30px 28px; border-left: 1px solid var(--line-d); border-top: 1px solid var(--line-d); }
+  .task h3 { font-family: var(--font-d); font-size: 1.05rem; margin-bottom: 8px; letter-spacing: -.01em; }
+  .task p { color: var(--muted-d); font-size: .86rem; }
+  @media (min-width: 940px) {
+    .task:nth-child(4n+1) { border-left: none; }
+    .task:nth-child(-n+4) { border-top: none; }
+  }
+  @media (max-width: 939px) and (min-width: 560px) {
+    .task:nth-child(odd) { border-left: none; }
+    .task:nth-child(-n+2) { border-top: none; }
+  }
+  @media (max-width: 559px) {
+    .task { border-left: none; }
+    .task:first-child { border-top: none; }
+  }
+  .dark { background: var(--ink); color: var(--paper); }
+  .dark h2 { color: var(--paper); }
+
+  /* Sectores */
+  .sectors { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 56px; }
+  .sector-card {
+    border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 36px 32px; background: #fff; transition: box-shadow .2s;
     display: flex; flex-direction: column;
-    transition: background .2s ease;
   }
-  .case:first-child { border-left: none; }
-  .case:hover { background: #fff; }
-  .case .body { padding: 38px 34px; flex: 1; display: flex; flex-direction: column; }
-  .case .sector {
-    font-family: var(--font-d); font-size: .68rem; font-weight: 500;
-    letter-spacing: .2em; text-transform: uppercase; color: var(--accent);
+  .sector-card:hover { box-shadow: 8px 8px 0 rgba(224, 66, 10, .15); }
+  .sector-card .icon { font-size: 1.8rem; margin-bottom: 16px; }
+  .sector-card h3 { font-family: var(--font-d); font-size: 1.3rem; letter-spacing: -.02em; margin-bottom: 10px; }
+  .sector-card p { font-size: .9rem; color: var(--muted); flex: 1; }
+  .sector-card a {
+    margin-top: 22px; display: inline-block;
+    font-family: var(--font-d); font-size: .74rem; font-weight: 500;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--accent);
+    text-decoration: none;
   }
-  .case .metric {
-    font-family: var(--font-d); font-size: 3rem; font-weight: 700;
-    letter-spacing: -.04em; margin: 16px 0 4px; color: var(--ink);
-  }
-  .case .metric-label { font-size: .82rem; font-weight: 500; color: var(--ink-soft); margin-bottom: 16px; }
-  .case p { font-size: .9rem; color: var(--muted); }
-  .case .result {
-    margin-top: 22px; padding-top: 18px;
-    font-size: .82rem; color: var(--ink-soft); border-top: 1px solid var(--line);
-  }
-  .cases-note { text-align: center; color: var(--muted); font-size: .78rem; margin-top: 32px; }
-  @media (max-width: 860px) { .case { border-left: none; border-top: 1px solid var(--line); } .case:first-child { border-top: none; } }
+  .sector-card a::after { content: " →"; }
+  .sector-card a:hover { color: var(--accent-deep); }
+  .sector-miss { text-align: center; margin-top: 44px; color: var(--muted); font-size: .98rem; }
+  .sector-miss a { color: var(--accent); text-decoration: none; font-weight: 500; }
 
-  /* Agentes IA — tinta oscuro, hairlines, sin glow */
-  .agents { background: var(--ink); color: var(--paper); position: relative; overflow: hidden; }
-  .agents .wrap { position: relative; }
-  .agents-in { display: grid; grid-template-columns: 1.05fr .95fr; gap: 70px; align-items: center; }
-  .agents h2 { color: var(--paper); }
-  .agents .lead { color: var(--muted-d); }
-  .agent-feats { list-style: none; margin-top: 34px; display: grid; gap: 0; }
-  .agent-feats li {
-    display: flex; gap: 16px; font-size: .95rem; color: #d5cfc4;
-    padding: 16px 0; border-top: 1px solid var(--line-d);
+  /* Integraciones */
+  .intg-band {
+    margin-top: 60px; padding: 52px 48px;
+    border-radius: var(--radius);
+    background: var(--ink); color: var(--paper);
+    box-shadow: 10px 10px 0 rgba(224, 66, 10, .25);
   }
-  .agent-feats li:first-child { border-top: none; }
-  .agent-feats li .ic {
-    flex: none; width: 24px; height: 24px;
-    color: var(--accent); font-family: var(--font-d);
-    display: flex; align-items: center; justify-content: center;
-    font-size: .9rem; font-weight: 700; margin-top: 2px;
+  .intg-band h3 {
+    font-family: var(--font-d); font-weight: 700;
+    font-size: clamp(1.6rem, 3.4vw, 2.3rem); letter-spacing: -.03em;
+    line-height: 1.05; margin-bottom: 14px; color: var(--paper);
   }
-  .agent-feats b { color: var(--paper); }
-  .agent-stats {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 0; margin-top: 44px; border: 1px solid var(--line-d);
+  .intg-band > p { color: var(--muted-d); font-size: .95rem; }
+  .intg { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .intg span {
+    padding: 9px 18px; border: 1px solid var(--line-d); border-radius: 999px;
+    font-size: .84rem; color: var(--paper); background: rgba(243,240,234,.05);
+    transition: border-color .15s, background .15s;
   }
-  .agent-stats > div {
-    padding: 26px 18px; border-left: 1px solid var(--line-d);
-    text-align: center;
+  .intg span:hover { border-color: var(--accent); background: var(--accent-soft); }
+  .intg-note {
+    margin-top: 36px; font-family: var(--font-d);
+    font-size: clamp(1.1rem, 2.2vw, 1.45rem); letter-spacing: -.02em; line-height: 1.4;
+    max-width: 700px; color: var(--paper);
   }
-  .agent-stats > div:first-child { border-left: none; }
-  .agent-stats b {
-    display: block; font-family: var(--font-d);
-    font-size: 1.8rem; font-weight: 700; letter-spacing: -.03em;
-    color: var(--accent);
-  }
-  .agent-stats span { font-size: .74rem; color: var(--muted-d); letter-spacing: .04em; }
-  .agent-math {
-    margin-top: 28px; border-left: 2px solid var(--accent);
-    padding: 6px 0 6px 24px;
-  }
-  .am-title {
-    font-family: var(--font-d); font-size: .68rem; font-weight: 500;
-    letter-spacing: .22em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px;
-  }
-  .am-formula {
-    display: flex; flex-wrap: wrap; align-items: center; gap: 14px;
-    font-size: .9rem; color: var(--muted-d);
-  }
-  .am-formula span b { color: var(--paper); font-family: var(--font-d); font-size: 1.15rem; }
-  .am-formula i { color: var(--accent); font-style: normal; font-weight: 700; }
-  .am-formula .am-result b { color: var(--accent); }
-  .agent-math p { margin-top: 12px; font-size: .85rem; color: var(--muted-d); }
+  .intg-note b { color: var(--accent); }
 
-  /* Chat mock — tarjeta editorial, esquinas duras */
+  /* Recepcionista + chat */
+  .sys-in { display: grid; grid-template-columns: 1.05fr .95fr; gap: 70px; align-items: center; }
+  .sys-flow { list-style: none; margin-top: 36px; counter-reset: sf; }
+  .sys-flow li {
+    display: flex; gap: 18px; padding: 18px 14px;
+    border-top: 1px solid var(--line); align-items: baseline;
+    margin-left: -14px; transition: background .3s ease;
+  }
+  .sys-flow li::before {
+    counter-increment: sf; content: counter(sf, decimal-leading-zero);
+    font-family: var(--font-d); font-size: .78rem; font-weight: 700;
+    color: var(--accent); flex: none;
+  }
+  .sys-flow li.playing {
+    background: var(--accent-soft);
+    border-radius: var(--radius);
+  }
+  .sys-flow b { color: var(--ink); }
+  .sys-flow div { font-size: .95rem; color: var(--ink-soft); }
+  .sys-triggers { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .sys-triggers span {
+    padding: 8px 16px; border: 1px solid var(--line); border-radius: 999px;
+    font-size: .8rem; color: var(--ink-soft);
+  }
   .chat-mock {
     background: #fff; border: 1px solid var(--line);
     border-radius: var(--radius); overflow: hidden; color: var(--ink);
@@ -278,100 +422,111 @@
     background: var(--ink); color: var(--paper);
   }
   .chat-mock .ch-av {
-    width: 36px; height: 36px; border-radius: 0; background: var(--accent);
+    width: 36px; height: 36px; background: var(--accent);
     display: flex; align-items: center; justify-content: center;
     font-family: var(--font-d); font-weight: 700; font-size: .85rem;
   }
   .chat-mock .ch-head .n { font-weight: 600; font-size: .9rem; }
   .chat-mock .ch-head .s { font-size: .72rem; color: #9dc9b4; display: flex; align-items: center; gap: 6px; }
   .chat-mock .ch-head .s::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #9dc9b4; }
-  .chat-mock .ch-body { padding: 24px 18px; display: grid; gap: 10px; background: var(--paper-2); }
-  .msg { max-width: 82%; padding: 11px 15px; border-radius: 3px; font-size: .84rem; line-height: 1.45; }
+  .chat-mock .ch-body { padding: 22px 18px; display: grid; gap: 10px; background: var(--paper-2); min-height: 280px; align-content: start; }
+  .msg { max-width: 84%; padding: 11px 15px; border-radius: 3px; font-size: .84rem; line-height: 1.45; }
   .msg.ai { background: #fff; border: 1px solid var(--line); justify-self: start; color: var(--ink-soft); }
   .msg.me { background: var(--ink); color: var(--paper); justify-self: end; }
   .msg.ok { background: #eef5f0; border: 1px solid #b9d6c6; color: #1e4d3b; justify-self: start; font-weight: 500; }
+  .msg.typing { color: var(--muted); font-style: italic; }
+  .ch-scene {
+    padding: 12px 18px; border-top: 1px solid var(--line); background: #fff;
+    font-family: var(--font-d); font-size: .7rem; font-weight: 500;
+    letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .ch-scene::before {
+    content: ""; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent); animation: blink 1s ease infinite;
+  }
+  .ch-scene .now { color: var(--accent); }
+  @keyframes blink { 50% { opacity: .25; } }
+  @media (prefers-reduced-motion: reduce) { .ch-scene::before { animation: none; } }
   .chat-mock .ch-note {
     padding: 13px 20px; font-size: .72rem; color: var(--muted);
     border-top: 1px solid var(--line); text-align: center; background: #fff;
-    letter-spacing: .04em;
   }
-  @media (max-width: 860px) { .agents-in { grid-template-columns: 1fr; gap: 44px; } }
-  @media (max-width: 520px) { .agent-stats { grid-template-columns: 1fr; } .agent-stats > div { border-left: none; border-top: 1px solid var(--line-d); } .agent-stats > div:first-child { border-top: none; } }
+  @media (max-width: 860px) { .sys-in { grid-template-columns: 1fr; gap: 44px; } }
 
-  /* Diferencial — bloque papel-2 */
-  .diff { background: var(--paper-2); }
-  .diff-in { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center; }
-  .diff-card {
-    background: var(--ink); color: var(--paper);
-    border-radius: var(--radius);
-    padding: 40px; box-shadow: 10px 10px 0 rgba(23, 19, 16, .12);
-    position: relative;
-  }
-  .diff-card .tag {
+  /* Precios */
+  .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; margin-top: 56px; border: 1px solid var(--line); }
+  .plan { padding: 40px 34px; border-left: 1px solid var(--line); }
+  .plan:first-child { border-left: none; }
+  .plan .pt {
     font-family: var(--font-d); font-size: .68rem; font-weight: 500;
     letter-spacing: .2em; text-transform: uppercase; color: var(--accent);
   }
-  .diff-card h3 { font-family: var(--font-d); font-size: 1.35rem; margin: 14px 0; letter-spacing: -.02em; }
-  .diff-card p { color: var(--muted-d); font-size: .9rem; position: relative; }
-  .diff-card .mock {
-    margin-top: 20px; border-top: 1px solid var(--line-d);
-    padding: 15px 0 0; font-size: .83rem; color: #d5cfc4; position: relative;
+  .plan h3 { font-family: var(--font-d); font-size: 1.5rem; margin: 12px 0 8px; letter-spacing: -.02em; }
+  .plan .price { font-family: var(--font-d); font-size: .95rem; color: var(--muted); margin-bottom: 18px; }
+  .plan .price b { color: var(--ink); font-size: 1.5rem; letter-spacing: -.02em; }
+  .plan p { font-size: .88rem; color: var(--muted); }
+  .plan-note {
+    margin-top: 34px; padding: 26px 30px; background: var(--accent-soft);
+    border-left: 3px solid var(--accent); font-size: .95rem; color: var(--ink-soft);
+    display: flex; flex-wrap: wrap; gap: 18px; align-items: center; justify-content: space-between;
   }
-  .diff-card .mock .dot { display: inline-block; width: 7px; height: 7px; background: var(--accent); margin-right: 10px; }
-  .diff ul { list-style: none; margin-top: 30px; display: grid; gap: 0; }
-  .diff li {
-    display: flex; gap: 16px; font-size: .96rem; color: var(--ink-soft);
-    padding: 18px 0; border-top: 1px solid var(--line);
-  }
-  .diff li .n {
-    flex: none; width: 30px; height: 30px;
-    border: 1px solid var(--ink); color: var(--ink);
-    font-family: var(--font-d); font-size: .78rem; font-weight: 700;
-    display: flex; align-items: center; justify-content: center;
-  }
-  @media (max-width: 860px) { .diff-in { grid-template-columns: 1fr; } }
+  .plan-note .btn { flex: none; }
+  @media (max-width: 860px) { .plan { border-left: none; border-top: 1px solid var(--line); } .plan:first-child { border-top: none; } }
 
-  /* Método — dark editorial */
-  .dark { background: var(--ink); color: var(--paper); }
-  .dark h2 { color: var(--paper); }
+  /* Proceso */
   .steps {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 0; margin-top: 60px; border: 1px solid var(--line-d);
   }
-  .step { padding: 36px 28px; border-left: 1px solid var(--line-d); transition: background .2s; }
+  .step { padding: 38px 30px; border-left: 1px solid var(--line-d); }
   .step:first-child { border-left: none; }
-  .step:hover { background: rgba(243, 240, 234, .04); }
   .step .n { font-family: var(--font-d); font-size: .72rem; font-weight: 500; color: var(--accent); letter-spacing: .2em; }
-  .step h3 { font-family: var(--font-d); font-size: 1.2rem; margin: 14px 0 8px; letter-spacing: -.01em; }
-  .step p { color: var(--muted-d); font-size: .88rem; }
+  .step h3 { font-family: var(--font-d); font-size: 1.3rem; margin: 14px 0 8px; letter-spacing: -.01em; }
+  .step p { color: var(--muted-d); font-size: .9rem; }
   @media (max-width: 720px) { .step { border-left: none; border-top: 1px solid var(--line-d); } .step:first-child { border-top: none; } }
+  .steps-note { margin-top: 36px; color: var(--muted-d); font-family: var(--font-d); font-size: 1.05rem; }
+  .steps-note b { color: var(--paper); }
 
-  /* Ayudas — banda verde musgo, editorial */
+  /* Ejemplos */
+  .cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0; margin-top: 56px; border: 1px solid var(--line); }
+  .case { border-left: 1px solid var(--line); padding: 38px 34px; }
+  .case:first-child { border-left: none; }
+  .case .sector {
+    font-family: var(--font-d); font-size: .68rem; font-weight: 500;
+    letter-spacing: .2em; text-transform: uppercase; color: var(--accent);
+  }
+  .case h3 { font-family: var(--font-d); font-size: 1.25rem; margin: 14px 0 10px; letter-spacing: -.02em; }
+  .case p { font-size: .9rem; color: var(--muted); }
+  .case .ba { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .case .ba div { font-size: .8rem; }
+  .case .ba .before { color: var(--muted); }
+  .case .ba .after { color: var(--moss); }
+  .case .ba b { display: block; font-family: var(--font-d); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 6px; }
+  .cases-note { text-align: center; color: var(--muted); font-size: .8rem; margin-top: 30px; }
+  @media (max-width: 860px) { .case { border-left: none; border-top: 1px solid var(--line); } .case:first-child { border-top: none; } }
+
+  /* Ayudas */
   .aid-band {
     background: var(--moss); color: var(--paper);
     border-radius: var(--radius);
-    padding: 56px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 44px; align-items: center;
-    position: relative; overflow: hidden;
+    padding: 44px 48px; display: flex; flex-wrap: wrap; gap: 28px;
+    align-items: center; justify-content: space-between;
     box-shadow: 10px 10px 0 rgba(23, 19, 16, .1);
   }
-  .aid-band::before {
-    content: "€"; position: absolute; right: -14px; bottom: -90px;
-    font-family: var(--font-s); font-style: italic;
-    font-size: 17rem; font-weight: 400; color: rgba(243, 240, 234, .07); line-height: 1;
+  .aid-band h3 { font-family: var(--font-d); font-size: 1.35rem; letter-spacing: -.02em; margin-bottom: 8px; }
+  .aid-band p { color: #a8c9bb; font-size: .92rem; max-width: 560px; }
+  .aid-band .aid-cta {
+    flex: none; font-family: var(--font-d); font-size: .76rem; font-weight: 500;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--paper);
+    border: 1px solid rgba(243,240,234,.4); border-radius: var(--radius);
+    padding: 14px 26px; text-decoration: none; transition: background .18s, color .18s;
   }
-  .aid-band h3 { font-family: var(--font-d); font-size: 1.7rem; letter-spacing: -.02em; margin-bottom: 14px; }
-  .aid-band p { color: #a8c9bb; font-size: .96rem; max-width: 480px; }
-  .aid-band ul { list-style: none; position: relative; display: grid; gap: 13px; }
-  .aid-band li { font-size: .9rem; padding-left: 26px; position: relative; color: #cfe4da; }
-  .aid-band li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-weight: 600; }
-  @media (max-width: 860px) { .aid-band { grid-template-columns: 1fr; padding: 40px; } }
+  .aid-band .aid-cta:hover { background: var(--paper); color: var(--moss); }
 
-  /* FAQ — hairline details */
+  /* FAQ */
   .faq { max-width: 800px; margin: 52px auto 0; }
-  .faq details {
-    border: none; border-top: 1px solid var(--line);
-    background: transparent;
-  }
+  .faq details { border-top: 1px solid var(--line); }
   .faq details:last-child { border-bottom: 1px solid var(--line); }
   .faq summary {
     padding: 24px 4px; font-family: var(--font-d); font-weight: 500;
@@ -388,15 +543,14 @@
   .faq details[open] summary::after { transform: rotate(45deg); }
   .faq .a { padding: 0 4px 26px; color: var(--muted); font-size: .93rem; max-width: 660px; }
 
-  /* CTA final — tinta, acento serif */
-  .final { background: var(--ink); color: var(--paper); text-align: center; position: relative; }
-  .final .wrap { position: relative; }
-  .final h2 { color: var(--paper); font-size: clamp(2.2rem, 5vw, 3.6rem); }
-  .final p { color: var(--muted-d); max-width: 560px; margin: 0 auto 40px; font-size: 1.05rem; }
+  /* CTA final */
+  .final { background: var(--ink); color: var(--paper); text-align: center; }
+  .final h2 { color: var(--paper); font-size: clamp(2.2rem, 5vw, 3.4rem); }
+  .final .lead2 { color: var(--muted-d); max-width: 580px; margin: 0 auto 12px; font-size: 1.05rem; }
+  .final .nos { color: var(--muted-d); font-size: .9rem; margin-bottom: 40px; }
   .final .alt { margin-top: 24px; font-size: .86rem; color: var(--muted-d); }
   .final .alt a { color: var(--accent); text-decoration: none; }
 
-  /* Formulario de contacto — sobre fondo tinta */
   .cform { max-width: 520px; margin: 0 auto; text-align: left; }
   .cform .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .cform label {
@@ -429,7 +583,6 @@
   .cform-legal a { color: var(--muted-d); }
   @media (max-width: 560px) { .cform .row { grid-template-columns: 1fr; } }
 
-  /* Footer */
   footer { background: var(--ink); border-top: 1px solid var(--line-d); padding: 64px 0 36px; color: var(--muted-d); }
   .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 44px; }
   .foot-grid h4 {
@@ -460,285 +613,384 @@
   <div class="wrap nav-in">
     <a class="brand" href="#"><span class="mark">TG</span>Tuned Growth</a>
     <div class="nav-links">
-      <a href="#servicios">Servicios</a>
-      <a href="#agentes">Agentes IA</a>
-      <a href="#metodo">Método</a>
-      <a href="#casos">Casos de éxito</a>
+      <a href="#fugas">El problema</a>
+      <a href="#sistema">El sistema</a>
+      <a href="#sectores">Sectores</a>
       <a href="#faq">FAQ</a>
     </div>
-    <a class="btn btn-primary" href="#contacto">Hablemos</a>
+    <a class="btn btn-primary" href="#contacto">Quiero mi demo</a>
   </div>
 </nav>
 
+<!-- HERO — claim nuevo -->
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow">Consultoría de digitalización · España</span>
-    <h1>Captar. Atender. <span class="grad-text">Vender.</span><br>Tu negocio, abierto 24/7.</h1>
-    <p class="lead">Ayudamos a pymes a digitalizar lo que de verdad mueve la cuenta de resultados: una web que convierte, agentes de IA que atienden, reservas que se cobran solas y marketing que trae clientes.</p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="#contacto">Solicitar diagnóstico gratuito</a>
-      <a class="btn btn-outline-d" href="#casos">Ver casos de éxito</a>
+    <span class="eyebrow">Sistemas de captación y atención automática</span>
+    <h1>Tu negocio puede <span class="grad-text">hacer más.</span><br><span class="u">Sin hacer más tú.</span></h1>
+    <div class="hero-in" style="margin-top:44px">
+      <div>
+        <p class="lead" style="margin-top:0">Automatizamos captación, atención, ventas y seguimiento para que tu negocio genere más reduciendo la carga de trabajo de tu equipo.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contacto">Quiero ver mi demo</a>
+          <a class="btn btn-outline-d" href="#fugas">Ver qué podría automatizar</a>
+        </div>
+        <p class="hero-note"><b>Primero lo pruebas. Después decides.</b> Analizamos tu negocio y te enseñamos una versión funcionando con tus propios servicios, horarios y datos. <strong>Sin compromiso.</strong></p>
+      </div>
+      <ul class="hero-checks">
+        <li class="while">Mientras tú trabajas, el sistema:</li>
+        <li>Responde consultas al instante — web y WhatsApp</li>
+        <li>Atiende llamadas fuera de horario</li>
+        <li>Agenda y confirma citas automáticamente</li>
+        <li>Hace seguimiento de cada contacto</li>
+        <li>Recupera oportunidades que se daban por perdidas</li>
+        <li>Solicita reseñas tras cada visita</li>
+      </ul>
     </div>
-    <p class="hero-note"><b>Sin humo:</b> te enseñamos una demo funcionando con los datos de tu negocio antes de que decidas nada.</p>
-    <div class="hero-grid">
-      <div><b>Web + IA</b><span>un solo sistema, no piezas sueltas</span></div>
-      <div><b>24/7</b><span>reservas y atención sin personal</span></div>
-      <div><b>Demo-first</b><span>pruébalo antes de pagar</span></div>
-      <div><b>Ayudas</b><span>identificamos subvenciones aplicables</span></div>
+    <div class="hero-strip">
+      <div><b>24/7</b>atención, también festivos y madrugada</div>
+      <div><b>&lt;3 s</b>tiempo de respuesta a cada consulta</div>
+      <div><b>0 €</b>que pagas antes de probar tu demo</div>
     </div>
   </div>
 </header>
 
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Hostelería</span><span>Clínicas</span><span>Turismo</span>
-    <span>Comercio local</span><span>Servicios profesionales</span>
-    <span>Veterinarias</span><span>Academias</span><span>Pymes</span>
-    <span>Hostelería</span><span>Clínicas</span><span>Turismo</span>
-    <span>Comercio local</span><span>Servicios profesionales</span>
-    <span>Veterinarias</span><span>Academias</span><span>Pymes</span>
+    <span>Clínicas</span><span>Hostelería</span><span>Servicios locales</span>
+    <span>Donde una llamada o reserva vale dinero</span>
+    <span>Clínicas</span><span>Hostelería</span><span>Servicios locales</span>
+    <span>Donde una llamada o reserva vale dinero</span>
   </div>
 </div>
 
-<section id="servicios">
+<!-- FUGAS -->
+<section id="fugas">
   <div class="wrap">
-    <div class="sec-num">01 — Servicios</div>
-    <h2>Digitalización que se nota<br>en la caja, no en un informe</h2>
-    <p class="lead">Cada proyecto se diseña para resolver un problema concreto de negocio: captar más, atender mejor o vender sin fricción.</p>
-    <div class="pillars">
-      <div class="pillar reveal">
-        <div class="pn">01</div>
-        <div>
-          <h3>Recepción Digital</h3>
-          <p class="pd">Clientes atendidos y citas cerradas, también a las 23:00: web profesional, agente de IA, WhatsApp y reservas online.</p>
-        </div>
-        <ul>
-          <li>Web profesional optimizada para móvil</li>
-          <li>Asistente IA entrenado con tu información</li>
-          <li>Reservas, citas y pagos/señal</li>
-          <li>WhatsApp y captación de leads</li>
-          <li>Google Maps y SEO local</li>
-          <li>Analítica clara, sin jerga</li>
-        </ul>
+    <div class="sec-num">El problema</div>
+    <h2>¿Cuántos clientes estás perdiendo<br>sin darte cuenta?</h2>
+    <p class="lead">No hace falta que tu web sea mala. Basta con que una consulta se quede sin respuesta para que el cliente llame al siguiente resultado de Google.</p>
+    <div class="leaks reveal">
+      <div class="leak">
+        <div class="flow">Cliente <span class="x">→</span> WhatsApp <span class="x">→</span> nadie responde <span class="x">→</span> <b>cliente desaparece</b></div>
+        <span class="tag">Fuga nº 1</span>
       </div>
-      <div class="pillar reveal">
-        <div class="pn">02</div>
-        <div>
-          <h3>Automatización e IA</h3>
-          <p class="pd">Horas recuperadas y cero tareas olvidadas: recordatorios, confirmaciones, reseñas y recuperación de clientes funcionando solos.</p>
-        </div>
-        <ul>
-          <li>Automatización de reservas y seguimiento</li>
-          <li>Secretario IA para llamadas fuera de horario</li>
-          <li>CRM e integraciones con tus herramientas</li>
-          <li>Recordatorios y confirmaciones automáticas</li>
-          <li>Solicitud de reseñas tras cada visita</li>
-          <li>Recuperación de clientes inactivos</li>
-        </ul>
+      <div class="leak">
+        <div class="flow">Cliente <span class="x">→</span> llama fuera de horario <span class="x">→</span> buzón <span class="x">→</span> <b>cliente desaparece</b></div>
+        <span class="tag">Fuga nº 2</span>
       </div>
-      <div class="pillar reveal">
-        <div class="pn">03</div>
-        <div>
-          <h3>Marketing digital</h3>
-          <p class="pd">Clientes que te encuentran donde buscan: SEO local, reseñas y campañas que convierten visitas en ventas.</p>
-        </div>
-        <ul>
-          <li>SEO local y Google Business</li>
-          <li>Gestión de reseñas y reputación</li>
-          <li>Campañas de captación (SEM)</li>
-          <li>Email marketing y fidelización</li>
-          <li>Contenido orientado a conversión</li>
-          <li>Reporting claro de resultados</li>
-        </ul>
+      <div class="leak">
+        <div class="flow">Cliente <span class="x">→</span> rellena el formulario web <span class="x">→</span> nadie contesta <span class="x">→</span> <b>desaparece</b></div>
+        <span class="tag">Fuga nº 3</span>
+      </div>
+      <div class="leak">
+        <div class="flow">Cliente <span class="x">→</span> pide presupuesto <span class="x">→</span> nadie hace seguimiento <span class="x">→</span> <b>desaparece</b></div>
+        <span class="tag">Fuga nº 4</span>
+      </div>
+      <div class="leak">
+        <div class="flow">Cliente <span class="x">→</span> comenta en Google/reseñas <span class="x">→</span> sin respuesta <span class="x">→</span> <b>no vuelve</b></div>
+        <span class="tag">Fuga nº 5</span>
+      </div>
+      <div class="leak">
+        <div class="flow">Cliente <span class="x">→</span> te encuentra en Google <span class="x">→</span> no ve cómo contactar <span class="x">→</span> <b>desaparece</b></div>
+        <span class="tag">Fuga nº 6</span>
+      </div>
+      <div class="leak">
+        <div class="flow">Cliente <span class="x">→</span> tiene cita <span class="x">→</span> nadie se la recuerda <span class="x">→</span> <b>no se presenta</b></div>
+        <span class="tag">Fuga nº 7</span>
+      </div>
+      <div class="leak">
+        <div class="flow">Cliente antiguo <span class="x">→</span> nadie le escribe <span class="x">→</span> <b>nunca vuelve</b></div>
+        <span class="tag">Fuga nº 8</span>
+      </div>
+      <div class="leak-resolve">
+        Tuned Growth <b>automatiza esos puntos de fuga</b> — cada consulta respondida, cada llamada atendida, cada contacto con seguimiento.
       </div>
     </div>
   </div>
 </section>
 
-<!-- NOTA: casos de ejemplo — sustituir por casos reales antes de publicar -->
+<!-- CALCULADORA -->
+<section class="roi-band" id="calculadora">
+  <div class="wrap">
+    <div class="roi-in">
+      <div>
+        <span class="eyebrow">La cuenta que duele</span>
+        <h2>¿Cuánto negocio podrías<br>estar perdiendo?</h2>
+        <p class="lead">Mueve los números a los de tu negocio. La estimación usa solo las consultas que hoy no reciben respuesta.</p>
+        <div class="roi-form">
+          <div class="roi-field">
+            <label>Consultas al mes (web, WhatsApp, llamadas) <output id="o-consultas">90</output></label>
+            <input type="range" id="r-consultas" min="10" max="400" value="90" step="10">
+          </div>
+          <div class="roi-field">
+            <label>Ticket medio por cliente <output id="o-ticket">400 €</output></label>
+            <input type="range" id="r-ticket" min="10" max="500" value="400" step="10">
+          </div>
+          <div class="roi-field">
+            <label>% de consultas que hoy no se responden a tiempo <output id="o-fugas">65%</output></label>
+            <input type="range" id="r-fugas" min="5" max="80" value="65" step="5">
+          </div>
+          <div class="roi-field">
+            <label>% de consultas que acaban en venta/cita <output id="o-conv">70%</output></label>
+            <input type="range" id="r-conv" min="10" max="90" value="70" step="5">
+          </div>
+        </div>
+      </div>
+      <div class="roi-result reveal">
+        <div class="rt">Estimación de oportunidades perdidas</div>
+        <div class="big" id="roi-big">0 €/mes</div>
+        <div class="sub">Eso son <b id="roi-year">0 €</b> al año que podrías estar dejando sobre la mesa.</div>
+        <div class="math" id="roi-math"></div>
+        <a class="btn btn-primary" href="#contacto">Quiero analizar mi negocio</a>
+        <div class="roi-disclaimer">Estimación orientativa — la analizamos contigo con tus datos reales en el diagnóstico gratuito.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY — 6 fases -->
+<section id="sistema" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-num">01 — Qué hace el sistema</div>
+    <h2>Un sistema que acompaña<br>toda la venta</h2>
+    <p class="lead">No son servicios sueltos. Es un recorrido completo: desde que alguien te encuentra hasta que vuelve.</p>
+    <div class="journey">
+      <div class="jstep"><span class="n">01</span><h3>Captamos</h3><p>Web, Google, anuncios, formularios y WhatsApp.</p></div>
+      <div class="jstep"><span class="n">02</span><h3>Respondemos</h3><p>El cliente recibe una respuesta inmediata, incluso fuera de horario.</p></div>
+      <div class="jstep"><span class="n">03</span><h3>Cualificamos</h3><p>El sistema hace las preguntas necesarias y detecta si la oportunidad tiene sentido.</p></div>
+      <div class="jstep"><span class="n">04</span><h3>Convertimos</h3><p>Reserva, llamada, presupuesto o compra.</p></div>
+      <div class="jstep"><span class="n">05</span><h3>Recuperamos</h3><p>Si el cliente no compra, el sistema hace seguimiento.</p></div>
+      <div class="jstep"><span class="n">06</span><h3>Fidelizamos</h3><p>Reseñas, recordatorios y reactivación de antiguos clientes.</p></div>
+    </div>
+    <div class="journey-tag">
+      Tu equipo sigue haciendo su trabajo. <b>El sistema se ocupa de todo lo repetitivo que ocurre alrededor de una venta.</b>
+    </div>
+  </div>
+</section>
+
+<!-- TAREAS -->
+<section class="dark" id="tareas">
+  <div class="wrap">
+    <div class="sec-num">02 — Capacidades</div>
+    <h2>Un sistema. Muchas tareas.</h2>
+    <p class="lead">Todo lo que ocurre alrededor de una venta, automatizado.</p>
+    <div class="tasks">
+      <div class="task"><h3>Atención 24/7</h3><p>Responde preguntas de clientes por web, WhatsApp y teléfono.</p></div>
+      <div class="task"><h3>Reservas</h3><p>Agenda, confirma, modifica y recuerda citas.</p></div>
+      <div class="task"><h3>Seguimiento</h3><p>Persigue automáticamente oportunidades que todavía no han comprado.</p></div>
+      <div class="task"><h3>Reactivación</h3><p>Contacta con antiguos clientes que podrían volver.</p></div>
+      <div class="task"><h3>Presupuestos</h3><p>Recoge información, cualifica solicitudes y prepara el siguiente paso.</p></div>
+      <div class="task"><h3>Marketing</h3><p>Genera y distribuye campañas para atraer nueva demanda.</p></div>
+      <div class="task"><h3>CRM</h3><p>Centraliza las conversaciones y oportunidades.</p></div>
+      <div class="task"><h3>Web</h3><p>Una web diseñada para convertir, no simplemente para estar online.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORES -->
+<section id="sectores">
+  <div class="wrap">
+    <div class="sec-num">03 — Sectores</div>
+    <h2>¿Qué podría hacer<br>en tu negocio?</h2>
+    <div class="sectors">
+      <div class="sector-card reveal">
+        <div class="icon">🦷</div>
+        <h3>Clínicas</h3>
+        <p>Responder dudas, captar pacientes, gestionar citas, recordar visitas y reactivar pacientes antiguos.</p>
+        <a href="#contacto">Ver demo para una clínica</a>
+      </div>
+      <div class="sector-card reveal">
+        <div class="icon">🍽️</div>
+        <h3>Restaurantes</h3>
+        <p>Responder llamadas, gestionar reservas, resolver preguntas y aumentar las reservas directas.</p>
+        <a href="#contacto">Ver demo para un restaurante</a>
+      </div>
+      <div class="sector-card reveal">
+        <div class="icon">🏠</div>
+        <h3>Servicios y reformas</h3>
+        <p>Recoger solicitudes, cualificar proyectos, pedir fotografías, preparar presupuestos y hacer seguimiento.</p>
+        <a href="#contacto">Ver demo para una empresa de servicios</a>
+      </div>
+    </div>
+    <p class="sector-miss">¿No ves tu sector? No significa que no podamos hacerlo. <a href="#contacto">Analizar mi negocio →</a></p>
+  </div>
+</section>
+
+<!-- EL SISTEMA: recepcionista + integración + chat interactivo -->
+<section style="padding-top:0" id="recepcionista">
+  <div class="wrap">
+    <div class="sec-num">04 — El sistema</div>
+    <div class="sys-in">
+      <div>
+        <h2 style="margin-top:-6px">Tu recepcionista digital<br>trabaja 24/7</h2>
+        <p class="lead">No vendemos «un chatbot». Te instalamos el sistema que hace que ningún cliente se quede sin respuesta — y que cada respuesta acabe en agenda.</p>
+        <div class="sys-triggers">
+          <span>Alguien pregunta por WhatsApp</span>
+          <span>Alguien llama fuera de horario</span>
+          <span>Alguien entra en tu web</span>
+          <span>Alguien pregunta precios</span>
+          <span>Alguien pide cita</span>
+        </div>
+        <ol class="sys-flow" id="sys-flow">
+          <li data-step="0"><div><b>Responde</b> al instante — con la información real de tu negocio, nunca inventada.</div></li>
+          <li data-step="1"><div><b>Cualifica</b> — detecta qué necesita el cliente y si encaja con lo que ofreces.</div></li>
+          <li data-step="2"><div><b>Agenda</b> — recoge servicio, día, hora y datos de contacto en la misma conversación.</div></li>
+          <li data-step="3"><div><b>Confirma</b> por WhatsApp — y envía recordatorios para que no falte a la cita.</div></li>
+          <li data-step="4"><div><b>Hace seguimiento</b> — recupera contactos fríos y pide reseñas tras cada visita.</div></li>
+        </ol>
+      </div>
+      <div class="chat-mock reveal">
+        <div class="ch-head">
+          <div class="ch-av">AI</div>
+          <div>
+            <div class="n">Asistente de tu negocio</div>
+            <div class="s">En línea — responde al instante</div>
+          </div>
+        </div>
+        <div class="ch-body" id="demo-chat"></div>
+        <div class="ch-scene" id="demo-scene">Demostración automática</div>
+        <div class="ch-note">En la demo de tu negocio responde con TUS datos — servicios, precios y horarios reales.</div>
+      </div>
+    </div>
+    <div class="intg-band">
+      <h3>No es un chatbot pegado a tu web.</h3>
+      <p>El sistema se conecta con las herramientas que ya utilizas:</p>
+      <div class="intg">
+        <span>WhatsApp</span><span>Teléfono</span><span>CRM</span><span>Calendario</span>
+        <span>Email</span><span>Formularios</span><span>Web</span><span>Herramientas de reservas</span>
+        <span>Hojas de cálculo</span><span>Y más</span>
+      </div>
+      <p class="intg-note">Nosotros nos encargamos de la integración y puesta en marcha. <b>Tú no necesitas aprender IA — necesitas que funcione.</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="dark" id="proceso">
+  <div class="wrap">
+    <div class="sec-num">05 — El proceso</div>
+    <h2>De la primera conversación<br>a tenerlo funcionando.</h2>
+    <div class="steps">
+      <div class="step"><span class="n">01</span><h3>Analizamos</h3><p>Revisamos tu negocio, tus canales de captación y dónde estás perdiendo oportunidades.</p></div>
+      <div class="step"><span class="n">02</span><h3>Te enseñamos</h3><p>Construimos una demo personalizada para que puedas probar el sistema.</p></div>
+      <div class="step"><span class="n">03</span><h3>Lo implementamos</h3><p>Conectamos las herramientas necesarias, ponemos el sistema en producción y lo optimizamos contigo.</p></div>
+    </div>
+    <p class="steps-note"><b>Tú no tienes que aprender cómo funciona.</b> Solo tienes que utilizarlo.</p>
+  </div>
+</section>
+
+<!-- EJEMPLOS -->
 <section id="casos">
   <div class="wrap">
-    <div class="sec-num">02 — Casos de éxito</div>
-    <h2>Negocios que ya funcionan así</h2>
-    <p class="lead">Sectores donde la recepción digital marca la diferencia.</p>
+    <div class="sec-num">06 — Ejemplos de automatizaciones</div>
+    <h2>Así podría funcionar<br>en un negocio como el tuyo</h2>
     <div class="cases">
-      <div class="case reveal">
-        <div class="body">
-          <span class="sector">Hostelería</span>
-          <div class="metric">0 €</div>
-          <div class="metric-label">en comisiones de apps de reserva</div>
-          <p>Restaurante con web propia, reservas directas y asistente que responde sobre carta y horarios — la sala se llena sin intermediarios.</p>
-          <div class="result">Reservas online desde el primer día · confirmaciones automáticas por WhatsApp</div>
+      <div class="case">
+        <span class="sector">Clínica</span>
+        <h3>Agenda que no pierde pacientes</h3>
+        <p>Asistente que responde sobre tratamientos, agenda citas 24/7, recuerda visitas y reactiva pacientes que llevan tiempo sin venir.</p>
+        <div class="ba">
+          <div class="before"><b>Antes</b>Consultas fuera de horario sin respuesta · huecos por ausencias</div>
+          <div class="after"><b>Con el sistema</b>Cada consulta respondida · recordatorios automáticos</div>
         </div>
       </div>
-      <div class="case reveal">
-        <div class="body">
-          <span class="sector">Clínicas</span>
-          <div class="metric">24/7</div>
-          <div class="metric-label">agenda abierta sin recepcionista</div>
-          <p>Clínica dental con citas online, recordatorios automáticos que reducen huecos de agenda y reactivación de pacientes que no volvían.</p>
-          <div class="result">Menos huecos en agenda · pacientes que vuelven a revisión</div>
+      <div class="case">
+        <span class="sector">Restaurante</span>
+        <h3>Reservas directas, sin comisiones</h3>
+        <p>Motor de reservas propio, asistente que responde sobre carta y horarios, y llamadas atendidas incluso en servicio.</p>
+        <div class="ba">
+          <div class="before"><b>Antes</b>Llamadas perdidas en hora punta · dependencia de apps</div>
+          <div class="after"><b>Con el sistema</b>Reserva directa confirmada por WhatsApp</div>
         </div>
       </div>
-      <div class="case reveal">
-        <div class="body">
-          <span class="sector">Turismo</span>
-          <div class="metric">100%</div>
-          <div class="metric-label">reserva directa, sin intermediarios</div>
-          <p>Camping con motor de reserva propio, señal online y asistente que responde sobre disponibilidad, precios y servicios en cualquier idioma.</p>
-          <div class="result">Sin comisión de Booking o Pitchup · señal cobrada al reservar</div>
+      <div class="case">
+        <span class="sector">Servicios</span>
+        <h3>Presupuestos que no se enfrían</h3>
+        <p>Recoge solicitudes, pide fotos y datos, cualifica el proyecto y hace seguimiento hasta que el presupuesto se cierra.</p>
+        <div class="ba">
+          <div class="before"><b>Antes</b>Solicitudes sin seguimiento · presupuestos olvidados</div>
+          <div class="after"><b>Con el sistema</b>Cada solicitud cualificada y perseguida</div>
         </div>
       </div>
     </div>
-    <p class="cases-note">Casos ilustrativos de los sectores en los que trabajamos — cada proyecto se mide con los datos del propio negocio.</p>
+    <p class="cases-note">Ejemplos de automatizaciones, no casos de clientes — los resultados reales se miden con los datos de tu negocio.</p>
   </div>
 </section>
 
-<section class="agents" id="agentes">
-  <div class="wrap agents-in">
-    <div>
-      <span class="eyebrow">Servicio estrella</span>
-      <h2>Agentes IA: el empleado<br>que nunca cierra</h2>
-      <p class="lead">Un agente de IA es un chatbot entrenado con la información real de tu negocio — tus servicios, tus precios, tus horarios — que atiende a cada cliente al instante, en tu web y en WhatsApp. IA donde aporta, no donde hace ruido.</p>
-      <ul class="agent-feats">
-        <li><span class="ic">✓</span><div><b>Responde al segundo.</b> Sin colas, sin "ahora le paso", sin clientes esperando. Cada consulta contestada de inmediato, día y noche.</div></li>
-        <li><span class="ic">✓</span><div><b>Convierte consultas en reservas.</b> Pide servicio, día, hora y nombre — y deja la cita cerrada con confirmación automática por WhatsApp.</div></li>
-        <li><span class="ic">✓</span><div><b>Sabe de tu negocio.</b> No improvisa: solo responde con la información que tú le das. Si no sabe algo, deriva a tu equipo.</div></li>
-        <li><span class="ic">✓</span><div><b>Libera horas cada semana.</b> Las preguntas repetidas — horarios, precios, disponibilidad, ubicación — dejan de interrumpir tu trabajo.</div></li>
-      </ul>
-      <div class="agent-stats">
-        <div><b>&lt;3 s</b><span>tiempo de respuesta</span></div>
-        <div><b>24/7</b><span>atención, también festivos</span></div>
-        <div><b>100%</b><span>de consultas respondidas</span></div>
-      </div>
-      <div class="agent-math">
-        <div class="am-title">La cuenta es simple</div>
-        <div class="am-formula">
-          <span><b>15</b> consultas/día</span>
-          <i>×</i>
-          <span><b>5 min</b> cada una</span>
-          <i>=</i>
-          <span class="am-result"><b>~37 h/mes</b> que recuperas</span>
-        </div>
-        <p>Y cada consulta sin responder fuera de horario es un cliente que llama al siguiente resultado de Google. El agente las captura todas — mientras duermes.</p>
-      </div>
-    </div>
-    <div class="chat-mock reveal">
-      <div class="ch-head">
-        <div class="ch-av">AI</div>
-        <div>
-          <div class="n">Asistente de tu negocio</div>
-          <div class="s">En línea — responde al instante</div>
-        </div>
-      </div>
-      <div class="ch-body">
-        <div class="msg ai">¡Hola! Soy el asistente virtual. Puedo contarte nuestros servicios y horarios, o dejarte una reserva hecha ahora mismo. ¿En qué te ayudo?</div>
-        <div class="msg me">Hola, me gustaría pedir cita</div>
-        <div class="msg ai">¡Perfecto! ¿Para qué servicio?</div>
-        <div class="msg me">Fisioterapia deportiva</div>
-        <div class="msg ai">Anotado. ¿Qué día te viene bien?</div>
-        <div class="msg me">El sábado por la mañana</div>
-        <div class="msg ai">El sábado tenemos hueco a las 10:30. ¿A nombre de quién lo dejo?</div>
-        <div class="msg me">Lucas</div>
-        <div class="msg ok">✓ Reserva anotada: Fisioterapia deportiva · sábado · 10:30 · a nombre de Lucas. Confirmación enviada por WhatsApp.</div>
-      </div>
-      <div class="ch-note">Así de fácil: mientras tú trabajas, el agente agenda clientes.</div>
-    </div>
-  </div>
-</section>
-
-<section class="diff">
-  <div class="wrap diff-in">
-    <div>
-      <span class="eyebrow">Lo que nos hace diferentes</span>
-      <h2>Diagnóstico con datos,<br>no con intuición.</h2>
-      <ul>
-        <li><span class="n">1</span><div><b>Análisis real, no genérico.</b> Rastreamos tu web, tu sector y tu zona antes de la primera llamada — llegamos sabiendo qué te falta.</div></li>
-        <li><span class="n">2</span><div><b>Propuesta interactiva.</b> No un PDF: una página solo para ti, con la demo funcionando, la inversión concreta y las ayudas que podrían aplicar.</div></li>
-        <li><span class="n">3</span><div><b>Honestidad comercial.</b> Si tu web está bien, te lo decimos. Si una ayuda no aplica, no la prometemos. Preferimos perder una venta que un cliente que no confía.</div></li>
-      </ul>
-    </div>
-    <div class="diff-card reveal">
-      <span class="tag">Así se ve una propuesta nuestra</span>
-      <h3>demo.tunedgrowth.com/tu-negocio</h3>
-      <p>Una página interactiva solo para ti: diagnóstico, demo del asistente, simulación de reservas e inversión.</p>
-      <div class="mock"><span class="dot"></span>Asistente: «¿Tenéis mesa el sábado a las 21:00?» → reserva confirmada por WhatsApp</div>
-      <div class="mock"><span class="dot"></span>7 oportunidades detectadas en vuestra presencia digital</div>
-      <div class="mock"><span class="dot"></span>Inversión concreta · posible ayuda aplicable</div>
-    </div>
-  </div>
-</section>
-
-<section class="dark" id="metodo">
-  <div class="wrap">
-    <div class="sec-num">03 — El método: Demo-First</div>
-    <h2>Primero lo pruebas.<br>Luego decides.</h2>
-    <p class="lead">Demo-First es nuestra forma de trabajar: nunca te pedimos imaginar el resultado. Ves tu solución funcionando — con tu nombre, tus servicios y tus fotos — antes de invertir un euro.</p>
-    <div class="steps">
-      <div class="step"><span class="n">01</span><h3>Diagnóstico</h3><p>Analizamos tu presencia digital y detectamos las oportunidades concretas de tu negocio. 30–45 min.</p></div>
-      <div class="step"><span class="n">02</span><h3>Demo</h3><p>Te enseñamos una demo personalizada funcionando — la pruebas antes de decidir.</p></div>
-      <div class="step"><span class="n">03</span><h3>Implementación</h3><p>Construimos y configuramos la solución; revisamos todo contigo antes de publicar.</p></div>
-      <div class="step"><span class="n">04</span><h3>Optimización</h3><p>Medimos resultados y seguimos mejorando: automatizaciones, captación y nuevas funciones.</p></div>
-    </div>
-  </div>
-</section>
-
+<!-- AYUDAS -->
 <section style="padding-top:0">
   <div class="wrap">
     <div class="aid-band reveal">
       <div>
         <h3>¿Ayudas públicas para digitalizar?</h3>
-        <p>Existen programas de apoyo a la digitalización de pymes (autonómicos, estatales y europeos). Analizamos cuáles podrían ser aplicables a tu empresa y te acompañamos en la comprobación de elegibilidad.</p>
+        <p>Existen programas de apoyo a la digitalización de pymes. Los revisamos contigo dentro del diagnóstico — si aplica, te lo decimos; si no, también.</p>
       </div>
-      <ul>
-        <li>Identificamos los programas vigentes para tu sector y zona</li>
-        <li>Te decimos con honestidad si encajas o no</li>
-        <li>Preparamos la documentación técnica del proyecto</li>
-        <li>Sin promesas: la ayuda se confirma solo tras verificar requisitos</li>
-      </ul>
+      <a class="aid-cta" href="#contacto">Revisar mi caso</a>
     </div>
   </div>
 </section>
 
-<section id="faq">
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-num">04 — Preguntas frecuentes</div>
-    <div class="center">
-      <h2>Lo que sueles preguntarte antes de llamar</h2>
-    </div>
+    <div class="sec-num">07 — Preguntas frecuentes</div>
+    <div class="center"><h2>Lo que sueles preguntarte</h2></div>
     <div class="faq">
       <details>
-        <summary>¿En qué se diferencia esto de una agencia web?</summary>
-        <div class="a">No vendemos páginas: vendemos un sistema que capta, atiende y cobra. La web es una pieza; el asistente IA, las reservas y la automatización son lo que mueve la cuenta de resultados. Y trabajamos demo-first: ves tu solución funcionando antes de decidir.</div>
+        <summary>¿Tengo que cambiar mi CRM?</summary>
+        <div class="a">No necesariamente. Diseñamos la implementación alrededor de las herramientas que ya utilizas cuando es viable.</div>
       </details>
       <details>
-        <summary>¿El asistente IA responde bien a mis clientes?</summary>
-        <div class="a">Se entrena con la información real de tu negocio: servicios, precios, horarios, políticas. Responde al instante lo que ya está claro y deriva a una persona cuando algo requiere criterio — nunca inventa.</div>
+        <summary>¿La IA sustituye a mi equipo?</summary>
+        <div class="a">No es necesario plantearlo así. El objetivo es automatizar tareas repetitivas y permitir que el equipo se concentre en las interacciones que requieren intervención humana.</div>
       </details>
       <details>
-        <summary>¿Puedo conseguir una subvención para esto?</summary>
-        <div class="a">Posiblemente. Hay programas autonómicos y estatales de digitalización que cambian con cada convocatoria. Nosotros identificamos los aplicables a tu caso y te acompañamos en la comprobación — pero la ayuda solo se confirma verificando los requisitos vigentes.</div>
+        <summary>¿Funciona fuera del horario comercial?</summary>
+        <div class="a">Sí. Precisamente uno de los principales casos de uso es atender consultas cuando el equipo no está disponible.</div>
       </details>
       <details>
-        <summary>¿Cuánto tarda en estar funcionando?</summary>
-        <div class="a">Una Presencia Digital suele estar en semanas, no meses. Los proyectos con reservas y automatización dependen de las integraciones necesarias — en la propuesta te damos un calendario cerrado.</div>
+        <summary>¿Puedo probarlo antes?</summary>
+        <div class="a">Sí — es nuestro argumento central: primero construimos una demo personalizada con tu negocio y después decides.</div>
       </details>
       <details>
-        <summary>¿Y si ya tengo web?</summary>
-        <div class="a">Perfecto — la analizamos en el diagnóstico. A veces basta conectar reservas y asistente a lo que ya tienes; otras conviene una web nueva. Te lo decimos con datos, no por vender más.</div>
+        <summary>¿Cuánto cuesta?</summary>
+        <div class="a">Depende del número de canales, integraciones y procesos que quieras automatizar. Te damos una propuesta después de analizar el caso.</div>
       </details>
       <details>
-        <summary>¿Qué pasa si no me convence la demo?</summary>
-        <div class="a">Nada — la demo y el diagnóstico son gratuitos. Si no ves valor, no hay compromiso. Preferimos perder una venta que tener un cliente que no cree en lo que hace.</div>
+        <summary>¿Y si no sé exactamente qué necesito?</summary>
+        <div class="a">Perfecto. Esa es precisamente la función del análisis inicial.</div>
       </details>
     </div>
   </div>
 </section>
 
+<!-- DIFERENCIACIÓN — cierre antes del CTA -->
+<section class="demofirst" id="demo" style="background:var(--paper); padding-top:0">
+  <div class="wrap df-in">
+    <span class="eyebrow">Por qué es diferente</span>
+    <h2>Primero lo pruebas.<br>Después decides.</h2>
+    <p class="lead">No queremos que nos creas porque lo diga nuestra web.</p>
+    <div class="df-steps">
+      <div>Analizamos tu negocio y construimos una demo personalizada.</div>
+      <div>Utilizamos tus servicios, horarios, preguntas frecuentes y procesos para enseñarte cómo podría funcionar en tu caso.</div>
+      <div>Después puedes probarlo tú mismo.</div>
+    </div>
+    <div class="df-verdict">
+      <span class="yes">Si tiene sentido, lo implementamos.</span>
+      <span>Si no, no pasa nada.</span>
+    </div>
+    <div style="margin-top:36px">
+      <a class="btn btn-primary" href="#contacto">Quiero mi demo personalizada</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
 <section class="final" id="contacto">
   <div class="wrap">
-    <h2>¿Hablamos de tu negocio?</h2>
-    <p>Te preparamos un diagnóstico de tu presencia digital y una demo personalizada que puedes probar antes de decidir. Sin compromiso.</p>
+    <h2>Descubre qué podríamos<br>automatizar en tu negocio.</h2>
+    <p class="lead2">Te enseñamos una demo personalizada utilizando tu negocio como ejemplo.</p>
+    <p class="nos">No necesitas saber de IA. No necesitas cambiar todo tu negocio.<br>Solo necesitamos encontrar una tarea que pueda hacerse mejor.</p>
     <form class="cform" id="cform" action="https://formsubmit.co/ajax/hola@tunedgrowth.com" method="POST" novalidate>
       <div class="row">
         <div class="field">
@@ -761,19 +1013,19 @@
         </div>
       </div>
       <div class="field">
-        <label for="cf-msg">¿Qué necesitas?</label>
-        <textarea id="cf-msg" name="mensaje" required placeholder="Web nueva, un asistente que responda por ti, más reservas…"></textarea>
+        <label for="cf-web">Web de tu negocio (si tienes)</label>
+        <input type="text" id="cf-web" name="web" placeholder="tunegocio.com — la usamos para preparar tu demo">
       </div>
-      <input type="hidden" name="_subject" value="Diagnóstico digital — tunedgrowth.com">
+      <input type="hidden" name="_subject" value="Quiero mi demo — tunedgrowth.com">
       <input type="text" name="_honey" style="display:none">
-      <button type="submit" class="btn btn-light" id="cf-submit">Solicitar diagnóstico gratuito</button>
-      <p class="cform-legal">Al enviar aceptas la <a href="/privacidad.html">política de privacidad</a> — solo usamos tus datos para responder a tu solicitud.</p>
+      <button type="submit" class="btn btn-light" id="cf-submit">Quiero mi demo</button>
+      <p class="cform-legal">Al enviar aceptas la <a href="/privacidad.html">política de privacidad</a> — solo usamos tus datos para preparar tu demo.</p>
       <p class="cform-err" id="cf-err">Algo ha fallado — escríbenos a hola@tunedgrowth.com</p>
     </form>
     <div class="cform-done" id="cf-done">
-      ✓ Recibido — te preparo el diagnóstico y te escribo en menos de 24h laborables.
+      ✓ Recibido — estoy preparando tu demo y te escribo en menos de 24h laborables.
     </div>
-    <p class="alt">O escríbenos a <a href="mailto:hola@tunedgrowth.com">hola@tunedgrowth.com</a></p>
+    <p class="alt">Sin compromiso · O escríbenos a <a href="mailto:hola@tunedgrowth.com">hola@tunedgrowth.com</a></p>
   </div>
 </section>
 
@@ -782,24 +1034,23 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a class="brand" href="#"><span class="mark">TG</span>Tuned Growth</a>
-        <p>Consultoría de digitalización, IA y marketing para pymes. Sistemas que captan, atienden y venden — 24/7.</p>
+        <p>Automatizamos captación, atención, ventas y seguimiento — tu negocio hace más sin que tú hagas más.</p>
       </div>
       <div>
-        <h4>Servicios</h4>
-        <a href="#servicios">Recepción Digital</a>
-        <a href="#servicios">Automatización e IA</a>
-        <a href="#servicios">Marketing digital</a>
+        <h4>Soluciones</h4>
+        <a href="#fugas">El problema</a>
+        <a href="#sistema">El sistema</a>
+        <a href="#calculadora">Calculadora</a>
       </div>
       <div>
         <h4>Empresa</h4>
-        <a href="#metodo">Método</a>
-        <a href="#casos">Casos de éxito</a>
-        <a href="#faq">FAQ</a>
+        <a href="#demo">Tu demo</a>
+        <a href="#casos">Casos</a>
       </div>
       <div>
         <h4>Contacto</h4>
         <a href="mailto:hola@tunedgrowth.com">hola@tunedgrowth.com</a>
-        <a href="#contacto">Diagnóstico gratuito</a>
+        <a href="#contacto">Quiero mi demo</a>
       </div>
     </div>
     <div class="foot-bottom">
@@ -815,7 +1066,103 @@
   }, { threshold: .12 });
   document.querySelectorAll(".reveal").forEach(el => io.observe(el));
 
-  // Formulario de contacto → hola@tunedgrowth.com (FormSubmit AJAX)
+  // ── Calculadora ──
+  const R = id => document.getElementById(id);
+  const fmt = n => new Intl.NumberFormat("es-ES", { maximumFractionDigits: 0 }).format(Math.round(n));
+  function roi() {
+    const consultas = +R("r-consultas").value;
+    const ticket = +R("r-ticket").value;
+    const fugas = +R("r-fugas").value / 100;
+    const conv = +R("r-conv").value / 100;
+    const perdidas = consultas * fugas;
+    const mes = perdidas * conv * ticket;
+    R("o-consultas").textContent = consultas;
+    R("o-ticket").textContent = fmt(ticket) + " €";
+    R("o-fugas").textContent = Math.round(fugas * 100) + "%";
+    R("o-conv").textContent = Math.round(conv * 100) + "%";
+    R("roi-big").textContent = fmt(mes) + " €/mes";
+    R("roi-year").textContent = fmt(mes * 12) + " €";
+    R("roi-math").textContent =
+      `${fmt(perdidas)} consultas sin respuesta × ${Math.round(conv * 100)}% de conversión × ${fmt(ticket)} € de ticket = clientes que se van a otro.`;
+  }
+  ["r-consultas", "r-ticket", "r-fugas", "r-conv"].forEach(id =>
+    R(id).addEventListener("input", roi));
+  roi();
+
+  // ── Mini-agente — demostración automática en bucle ──
+  const chatBody = document.getElementById("demo-chat");
+  const sceneLbl = document.getElementById("demo-scene");
+  const flowSteps = document.querySelectorAll("#sys-flow li");
+  const SCENES = [
+    ["Responde", [
+      ["me", "¿Abrís los sábados?"],
+      ["ai", "Sí — sábados de 10:00 a 14:00. ¿Te agendo algo para este finde?"],
+    ]],
+    ["Cualifica", [
+      ["me", "Necesito presupuesto para una reforma"],
+      ["ai", "Claro. ¿Qué tipo de trabajo y para cuándo lo necesitas?"],
+      ["me", "Baño completo, cuanto antes"],
+      ["ai", "Perfecto — baño completo, prioritario. Encaja con lo que hacemos: te lo pasa el equipo y te llaman hoy mismo."],
+    ]],
+    ["Agenda", [
+      ["me", "¿Tenéis cita mañana por la tarde?"],
+      ["ai", "Sí — mañana tengo 17:30 y 19:00. ¿Cuál te viene mejor?"],
+      ["me", "Las 19:00"],
+      ["ai", "Anotado. ¿Tu nombre y teléfono?"],
+      ["me", "Marta, 612 345 678"],
+    ]],
+    ["Confirma", [
+      ["ok", "✓ Cita confirmada: mañana 19:00 · Marta. Recordatorio automático por WhatsApp 24h antes — y si no puede, la reprograma respondiendo."],
+    ]],
+    ["Hace seguimiento", [
+      ["ai", "Hola Marta — hace 6 meses de tu última revisión, te toca. ¿Te reservo hueco esta semana?"],
+      ["me", "Vale, el jueves"],
+      ["ok", "✓ Cliente recuperado: revisión jueves 10:00. Y al salir, el sistema le pide la reseña — automático."],
+    ]],
+  ];
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  function addMsg(txt, who) {
+    const d = document.createElement("div");
+    d.className = "msg " + who;
+    d.textContent = txt;
+    chatBody.appendChild(d);
+    chatBody.scrollTop = chatBody.scrollHeight;
+    return d;
+  }
+  async function playDemo() {
+    for (;;) {
+      chatBody.innerHTML = "";
+      for (let i = 0; i < SCENES.length; i++) {
+        const [name, msgs] = SCENES[i];
+        sceneLbl.innerHTML = `Demostración automática · <span class="now">${String(i + 1).padStart(2, "0")} — ${name}</span>`;
+        flowSteps.forEach((li, j) => li.classList.toggle("playing", j === i));
+        await wait(700);
+        for (const [who, txt] of msgs) {
+          if (who !== "me") {
+            const t = addMsg("escribiendo…", "ai typing");
+            await wait(750);
+            t.remove();
+          } else {
+            await wait(450);
+          }
+          addMsg(txt, who);
+          await wait(600);
+        }
+        await wait(1600);
+      }
+      flowSteps.forEach(li => li.classList.remove("playing"));
+      sceneLbl.textContent = "Demostración automática · reiniciando";
+      await wait(1400);
+    }
+  }
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    for (const [name, msgs] of SCENES) for (const [who, txt] of msgs) addMsg(txt, who);
+    sceneLbl.textContent = "Ejemplos de conversación";
+  } else {
+    playDemo();
+  }
+
+  // ── Formulario → hola@tunedgrowth.com ──
   const cf = document.getElementById("cform");
   if (cf) cf.addEventListener("submit", async e => {
     e.preventDefault();
@@ -835,7 +1182,7 @@
       document.getElementById("cf-done").classList.add("show");
     } catch {
       err.style.display = "block";
-      btn.disabled = false; btn.textContent = "Solicitar diagnóstico gratuito";
+      btn.disabled = false; btn.textContent = "Quiero mi demo";
     }
   });
 </script>
