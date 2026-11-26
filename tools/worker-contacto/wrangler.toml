@@ -1,0 +1,18 @@
+# Worker que recibe los formularios de tunedgrowth.com y los envía a Gmail.
+# Desplegar desde esta carpeta:  npx wrangler deploy
+name = "tunedgrowth-contacto"
+main = "index.js"
+compatibility_date = "2026-11-01"
+account_id = "72f15ffdafd273d99aa5df8cec517794"
+
+routes = [
+  { pattern = "tunedgrowth.com/api/contacto", zone_name = "tunedgrowth.com" }
+]
+
+# Email Routing: solo puede enviar a la dirección verificada
+[[send_email]]
+name = "CORREO"
+destination_address = "tunedgrowth@gmail.com"
+
+[observability]
+enabled = true

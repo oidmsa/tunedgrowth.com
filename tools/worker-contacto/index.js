@@ -1,6 +1,8 @@
 // Worker de Cloudflare «tunedgrowth-contacto»: recibe los formularios de tunedgrowth.com
-// y los envía a Gmail. Ruta: tunedgrowth.com/api/contacto
-// Binding (Settings → Bindings → Email Service): variable CORREO
+// y los envía a Gmail con Email Routing. Ruta: tunedgrowth.com/api/contacto
+// Configuración en wrangler.toml (binding send_email «CORREO»).
+import { EmailMessage } from "cloudflare:email";
+
 const DESTINO = "tunedgrowth@gmail.com";
 const REMITENTE = "formulario@tunedgrowth.com";
 const CAMPOS = { nombre: "Nombre", negocio: "Negocio", email: "Email", telefono: "Teléfono", web: "Web / interés" };
@@ -8,6 +10,13 @@ const CAMPOS = { nombre: "Nombre", negocio: "Negocio", email: "Email", telefono:
 const json = (obj, status = 200) =>
   new Response(JSON.stringify(obj), { status, headers: { "content-type": "application/json; charset=utf-8" } });
 const limpio = (v, max = 500) => String(v ?? "").replace(/[\r\n]+/g, " ").trim().slice(0, max);
+
+// Texto UTF-8 → base64 (para el cuerpo y el asunto del correo)
+function b64(texto) {
+  let bin = "";
+  for (const b of new TextEncoder().encode(texto)) bin += String.fromCharCode(b);
+  return btoa(bin);
+}
 
 export default {
   async fetch(request, env) {
@@ -35,11 +44,24 @@ export default {
       Object.entries(CAMPOS).map(([k, t]) => `${t}: ${limpio(datos[k], 2000) || "—"}`).join("\n") +
       `\n\nPágina: ${limpio(request.headers.get("referer"), 300) || "—"}` +
       `\nPaís: ${request.cf?.country || "—"}` +
-      `\nFecha: ${new Date().toISOString()}` +
-      `\n\nResponde directamente a: ${email}\n`;
+      `\nFecha: ${new Date().toISOString()}\n`;
+
+    const mime = [
+      `From: Web Tuned Growth <${REMITENTE}>`,
+      `To: ${DESTINO}`,
+      `Reply-To: ${email}`,
+      `Subject: =?UTF-8?B?${b64(asunto)}?=`,
+      `Message-ID: <${crypto.randomUUID()}@tunedgrowth.com>`,
+      `Date: ${new Date().toUTCString()}`,
+      "MIME-Version: 1.0",
+      "Content-Type: text/plain; charset=UTF-8",
+      "Content-Transfer-Encoding: base64",
+      "",
+      b64(texto).replace(/.{1,76}/g, (l) => l + "\r\n"),
+    ].join("\r\n");
 
     try {
-      await env.CORREO.send({ from: REMITENTE, to: DESTINO, subject: asunto, text: texto });
+      await env.CORREO.send(new EmailMessage(REMITENTE, DESTINO, mime));
       return json({ success: true });
     } catch (e) {
       console.error("Error al enviar", e && e.message);
