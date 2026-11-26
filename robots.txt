@@ -1,0 +1,27 @@
+# Tuned Growth — permitimos buscadores y asistentes de IA
+User-agent: *
+Allow: /
+
+# Asistentes de IA (permitidos de forma explícita)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+Sitemap: https://tunedgrowth.com/sitemap.xml

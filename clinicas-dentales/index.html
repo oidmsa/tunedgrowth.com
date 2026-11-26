@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínicas dentales: más pacientes de implantes y ortodoncia invisible | Tuned Growth</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<meta name="description" content="Hacemos que ChatGPT, Gemini y Google recomienden tu clínica dental para implantes, ortodoncia invisible y carillas, y que cada consulta acabe en primera visita. Diagnóstico gratis.">
+<meta property="og:title" content="Clínicas dentales: más pacientes de implantes y ortodoncia invisible | Tuned Growth">
+<meta property="og:description" content="Hacemos que ChatGPT, Gemini y Google recomienden tu clínica dental para implantes, ortodoncia invisible y carillas, y que cada consulta acabe en primera visita. Diagnóstico gratis.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tunedgrowth.com/clinicas-dentales/">
+<link rel="canonical" href="https://tunedgrowth.com/clinicas-dentales/">
+<style>
+  :root {
+    --paper: #f3f0e9;
+    --paper-2: #eae6dd;
+    --ink: #171310;
+    --ink-soft: #3a342c;
+    --muted: #6f665c;
+    --muted-d: #a89f93;
+    --line: #d9d3c6;
+    --line-d: rgba(243, 240, 234, .16);
+    --accent: #e0420a;
+    --accent-deep: #b53408;
+    --accent-soft: rgba(224, 66, 10, .08);
+    --moss: #1e4d3b;
+    --radius: 4px;
+    --font-d: "Space Grotesk", "Inter", sans-serif;
+    --font-b: "Inter", -apple-system, "Segoe UI", sans-serif;
+    --font-s: "Instrument Serif", Georgia, serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-b);
+    color: var(--ink); background: var(--paper); line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::after {
+    content: ""; position: fixed; inset: 0; z-index: 200;
+    pointer-events: none; opacity: .05; mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 110px 0; }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--font-d);
+    font-size: .7rem; font-weight: 500;
+    letter-spacing: .22em; text-transform: uppercase; color: var(--accent);
+    margin-bottom: 22px;
+  }
+  .eyebrow::before { content: ""; width: 26px; height: 1px; background: var(--accent); }
+
+  h1 {
+    font-family: var(--font-d);
+    font-size: clamp(2.9rem, 7vw, 5.6rem);
+    line-height: 1; letter-spacing: -.04em; font-weight: 700;
+  }
+  h2 {
+    font-family: var(--font-d);
+    font-size: clamp(2rem, 4.4vw, 3.2rem);
+    line-height: 1.02; letter-spacing: -.03em; font-weight: 700; margin-bottom: 18px;
+  }
+  .lead { color: var(--muted); font-size: 1.12rem; max-width: 640px; }
+  .dark .lead { color: var(--muted-d); }
+  .center { text-align: center; }
+  .center .lead { margin: 0 auto; }
+  .center .eyebrow { justify-content: center; }
+  .grad-text { font-family: var(--font-s); font-style: italic; font-weight: 400; letter-spacing: -.01em; color: var(--accent); }
+  h1 .u {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: .07em;
+    text-underline-offset: .12em;
+  }
+
+  .sec-num {
+    font-family: var(--font-d);
+    font-size: .72rem; font-weight: 500; color: var(--muted);
+    letter-spacing: .2em; text-transform: uppercase; margin-bottom: 44px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .sec-num::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .dark .sec-num { color: var(--muted-d); }
+  .dark .sec-num::after { background: var(--line-d); }
+
+  .btn {
+    display: inline-block; font-family: var(--font-d); font-weight: 500;
+    font-size: .8rem; letter-spacing: .14em; text-transform: uppercase;
+    text-decoration: none; padding: 16px 30px; border-radius: var(--radius);
+    transition: background .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;
+    cursor: pointer; border: 1px solid transparent;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: var(--accent-deep); }
+  .btn-light { background: var(--paper); color: var(--ink); }
+  .btn-light:hover { background: #fff; }
+  .btn-outline-d { background: transparent; color: var(--ink); border-color: var(--ink); }
+  .btn-outline-d:hover { background: var(--ink); color: var(--paper); }
+
+  /* Nav */
+  nav {
+    position: sticky; top: 0; z-index: 60;
+    background: rgba(243, 240, 233, .88);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-in { display: flex; align-items: center; gap: 30px; height: 68px; }
+  .brand {
+    display: flex; align-items: center; gap: 11px;
+    font-family: var(--font-d); font-weight: 700; font-size: 1.05rem;
+    letter-spacing: -.02em; text-decoration: none; color: var(--ink);
+  }
+  .brand .mark {
+    width: 32px; height: 32px; background: var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--paper); font-size: .95rem; font-weight: 700;
+  }
+  .nav-links { display: flex; gap: 28px; margin-left: auto; }
+  .nav-links a {
+    color: var(--muted); text-decoration: none;
+    font-size: .78rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-in .btn { padding: 12px 22px; }
+  @media (max-width: 840px) { .nav-links { display: none; } }
+
+  /* Hero */
+  .hero { padding: 100px 0 0; }
+  .hero-in { display: grid; grid-template-columns: 1.1fr .9fr; gap: 70px; align-items: start; }
+  .hero .lead { margin: 28px 0 38px; font-size: 1.2rem; }
+  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .hero-note {
+    margin-top: 30px; max-width: 560px;
+    padding: 18px 22px;
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft); border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: .92rem; color: var(--muted); line-height: 1.55;
+  }
+  .hero-note b {
+    display: block; font-family: var(--font-d); font-weight: 700;
+    font-size: 1.05rem; letter-spacing: -.01em; color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .hero-note strong { color: var(--ink); font-weight: 600; }
+  .hero-strip {
+    border-top: 1px solid var(--line); margin-top: 60px;
+    display: flex; flex-wrap: wrap;
+  }
+  .hero-strip > div {
+    flex: 1 1 200px; padding: 26px 28px 34px; border-left: 1px solid var(--line);
+    font-size: .84rem; color: var(--muted);
+  }
+  .hero-strip > div:first-child { border-left: none; padding-left: 0; }
+  .hero-strip b {
+    display: block; font-family: var(--font-d);
+    font-size: 1.4rem; font-weight: 700; letter-spacing: -.02em; color: var(--ink);
+  }
+  @media (max-width: 720px) { .hero-strip > div { border-left: none; padding-left: 0; } }
+  @media (max-width: 940px) { .hero-in { grid-template-columns: 1fr; gap: 44px; } }
+
+  /* Marquee */
+  .marquee {
+    background: var(--ink); border-block: 1px solid var(--ink);
+    overflow: hidden; padding: 16px 0; white-space: nowrap;
+  }
+  .marquee-track { display: inline-flex; gap: 52px; animation: mq 24s linear infinite; }
+  .marquee span {
+    color: var(--muted-d); font-family: var(--font-d);
+    font-size: .72rem; font-weight: 500;
+    letter-spacing: .24em; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 52px;
+  }
+  .marquee span::after { content: "/"; font-weight: 400; color: var(--accent); }
+  @keyframes mq { to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+
+  /* Fugas */
+  .leaks { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; margin-top: 56px; border: 1px solid var(--line); }
+  .leak { padding: 34px 30px; border-left: 1px solid var(--line); }
+  .leak:first-child { border-left: none; }
+  .leak .flow { font-family: var(--font-d); font-size: .82rem; color: var(--ink-soft); line-height: 1.7; }
+  .leak .flow .x { color: var(--accent); font-weight: 700; }
+  .leak .tag {
+    display: inline-block; margin-top: 18px; padding: 4px 12px;
+    font-family: var(--font-d); font-size: .68rem; font-weight: 500;
+    letter-spacing: .16em; text-transform: uppercase;
+    background: var(--accent-soft); color: var(--accent); border-radius: 999px;
+  }
+  .leak-resolve {
+    grid-column: 1/-1; padding: 26px 30px; border-top: 1px solid var(--line);
+    background: var(--moss); color: var(--paper);
+    font-family: var(--font-d); font-size: 1.05rem; letter-spacing: -.01em;
+  }
+  .leak-resolve b { color: #fff; }
+  @media (max-width: 860px) { .leak { border-left: none; border-top: 1px solid var(--line); } .leak:first-child { border-top: none; } }
+
+  /* Calculadora — sliders */
+  .roi-band { background: var(--ink); color: var(--paper); }
+  .roi-in { display: grid; grid-template-columns: 1.05fr .95fr; gap: 70px; align-items: start; }
+  .roi-band h2 { color: var(--paper); }
+  .roi-band .lead { color: var(--muted-d); }
+  .roi-form { margin-top: 40px; display: grid; gap: 26px; }
+  .roi-field label {
+    display: flex; justify-content: space-between; gap: 14px;
+    font-family: var(--font-d); font-size: .72rem; font-weight: 500;
+    letter-spacing: .16em; text-transform: uppercase; color: var(--muted-d);
+    margin-bottom: 10px;
+  }
+  .roi-field label output { color: var(--accent); font-size: .95rem; letter-spacing: 0; text-transform: none; font-weight: 700; }
+  .roi-field input[type="range"] {
+    width: 100%; appearance: none; height: 3px; border-radius: 3px;
+    background: var(--line-d); outline: none;
+  }
+  .roi-field input[type="range"]::-webkit-slider-thumb {
+    appearance: none; width: 20px; height: 20px; border-radius: 50%;
+    background: var(--accent); cursor: pointer; border: 3px solid var(--paper);
+  }
+  .roi-field input[type="range"]::-moz-range-thumb {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--accent); cursor: pointer; border: 3px solid var(--paper);
+  }
+  .roi-result {
+    background: var(--paper); color: var(--ink); border-radius: var(--radius);
+    padding: 44px 40px; position: sticky; top: 100px;
+    box-shadow: 10px 10px 0 rgba(224, 66, 10, .25);
+  }
+  .roi-result .rt {
+    font-family: var(--font-d); font-size: .7rem; font-weight: 500;
+    letter-spacing: .2em; text-transform: uppercase; color: var(--muted);
+  }
+  .roi-result .big {
+    font-family: var(--font-d); font-size: clamp(3rem, 6vw, 4.6rem);
+    font-weight: 700; letter-spacing: -.04em; color: var(--accent);
+    line-height: 1; margin: 14px 0 6px;
+  }
+  .roi-result .sub { font-size: .92rem; color: var(--muted); }
+  .roi-result .sub b { color: var(--ink); }
+  .roi-result .math {
+    margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line);
+    font-size: .8rem; color: var(--muted); line-height: 1.7;
+  }
+  .roi-result .btn { margin-top: 26px; width: 100%; text-align: center; }
+  .roi-disclaimer { margin-top: 14px; font-size: .72rem; color: var(--muted); }
+  @media (max-width: 860px) { .roi-in { grid-template-columns: 1fr; } .roi-result { position: static; } }
+
+  /* Journey — pasos del sistema */
+  .journey {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0; margin-top: 60px; border: 1px solid var(--line);
+  }
+  .jstep { padding: 34px 30px; border-left: 1px solid var(--line); border-top: 1px solid var(--line); transition: background .2s; }
+  .jstep:hover { background: #fff; }
+  .jstep .n { font-family: var(--font-d); font-size: .72rem; font-weight: 500; color: var(--accent); letter-spacing: .2em; }
+  .jstep h3 { font-family: var(--font-d); font-size: 1.25rem; margin: 12px 0 8px; letter-spacing: -.02em; }
+  .jstep p { color: var(--muted); font-size: .9rem; }
+  .journey-tag {
+    margin-top: 48px; padding: 30px 34px; background: var(--ink); color: var(--paper);
+    font-family: var(--font-d); font-size: clamp(1.15rem, 2.4vw, 1.6rem);
+    letter-spacing: -.02em; line-height: 1.4; border-radius: var(--radius);
+  }
+  .journey-tag b { color: var(--accent); }
+  @media (min-width: 940px) {
+    .jstep:nth-child(3n+1) { border-left: none; }
+    .jstep:nth-child(-n+3) { border-top: none; }
+  }
+  @media (max-width: 939px) and (min-width: 640px) {
+    .jstep:nth-child(odd) { border-left: none; }
+    .jstep:nth-child(-n+2) { border-top: none; }
+  }
+  @media (max-width: 639px) {
+    .jstep { border-left: none; }
+    .jstep:first-child { border-top: none; }
+  }
+
+  /* Diferenciación — demo */
+  .demofirst { background: var(--paper-2); }
+  .df-in { max-width: 720px; margin: 0 auto; text-align: center; }
+  .df-in .lead { margin: 0 auto; }
+  .df-steps { margin: 34px auto; max-width: 560px; text-align: left; }
+  .df-steps div {
+    padding: 14px 0 14px 26px; position: relative;
+    font-size: .98rem; color: var(--ink-soft);
+    border-left: 1px solid var(--line); margin-left: 12px;
+  }
+  .df-steps div::before {
+    content: ""; position: absolute; left: -5px; top: 22px;
+    width: 9px; height: 9px; background: var(--accent);
+  }
+  .df-verdict { display: flex; gap: 14px; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
+  .df-verdict span {
+    font-family: var(--font-d); font-size: .95rem; letter-spacing: -.01em;
+    padding: 12px 24px; border: 1px solid var(--ink); border-radius: 999px;
+  }
+  .df-verdict span.yes { background: var(--ink); color: var(--paper); }
+
+  /* Tareas */
+  .tasks {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0; margin-top: 56px; border: 1px solid var(--line-d);
+  }
+  .task { padding: 30px 28px; border-left: 1px solid var(--line-d); border-top: 1px solid var(--line-d); }
+  .task h3 { font-family: var(--font-d); font-size: 1.05rem; margin-bottom: 8px; letter-spacing: -.01em; }
+  .task p { color: var(--muted-d); font-size: .86rem; }
+  @media (min-width: 940px) {
+    .task:nth-child(4n+1) { border-left: none; }
+    .task:nth-child(-n+4) { border-top: none; }
+  }
+  @media (max-width: 939px) and (min-width: 560px) {
+    .task:nth-child(odd) { border-left: none; }
+    .task:nth-child(-n+2) { border-top: none; }
+  }
+  @media (max-width: 559px) {
+    .task { border-left: none; }
+    .task:first-child { border-top: none; }
+  }
+  .dark { background: var(--ink); color: var(--paper); }
+  .dark h2 { color: var(--paper); }
+
+  /* Integraciones */
+  .intg-band {
+    margin-top: 60px; padding: 52px 48px;
+    border-radius: var(--radius);
+    background: var(--ink); color: var(--paper);
+    box-shadow: 10px 10px 0 rgba(224, 66, 10, .25);
+  }
+  .intg-band h3 {
+    font-family: var(--font-d); font-weight: 700;
+    font-size: clamp(1.6rem, 3.4vw, 2.3rem); letter-spacing: -.03em;
+    line-height: 1.05; margin-bottom: 14px; color: var(--paper);
+  }
+  .intg-band > p { color: var(--muted-d); font-size: .95rem; }
+  .intg { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .intg span {
+    padding: 9px 18px; border: 1px solid var(--line-d); border-radius: 999px;
+    font-size: .84rem; color: var(--paper); background: rgba(243,240,234,.05);
+    transition: border-color .15s, background .15s;
+  }
+  .intg span:hover { border-color: var(--accent); background: var(--accent-soft); }
+  .intg-note {
+    margin-top: 36px; font-family: var(--font-d);
+    font-size: clamp(1.1rem, 2.2vw, 1.45rem); letter-spacing: -.02em; line-height: 1.4;
+    max-width: 700px; color: var(--paper);
+  }
+  .intg-note b { color: var(--accent); }
+
+  /* Chat + flujo del sistema */
+  .sys-in { display: grid; grid-template-columns: 1.05fr .95fr; gap: 70px; align-items: center; }
+  .sys-flow { list-style: none; margin-top: 36px; counter-reset: sf; }
+  .sys-flow li {
+    display: flex; gap: 18px; padding: 18px 14px;
+    border-top: 1px solid var(--line); align-items: baseline;
+    margin-left: -14px; transition: background .3s ease;
+  }
+  .sys-flow li::before {
+    counter-increment: sf; content: counter(sf, decimal-leading-zero);
+    font-family: var(--font-d); font-size: .78rem; font-weight: 700;
+    color: var(--accent); flex: none;
+  }
+  .sys-flow li.playing {
+    background: var(--accent-soft);
+    border-radius: var(--radius);
+  }
+  .sys-flow b { color: var(--ink); }
+  .sys-flow div { font-size: .95rem; color: var(--ink-soft); }
+  .sys-triggers { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .sys-triggers span {
+    padding: 8px 16px; border: 1px solid var(--line); border-radius: 999px;
+    font-size: .8rem; color: var(--ink-soft);
+  }
+  .chat-mock {
+    background: #fff; border: 1px solid var(--line);
+    border-radius: var(--radius); overflow: hidden; color: var(--ink);
+    box-shadow: 10px 10px 0 rgba(23, 19, 16, .08);
+  }
+  .chat-mock .ch-head {
+    display: flex; align-items: center; gap: 12px; padding: 16px 20px;
+    background: var(--ink); color: var(--paper);
+  }
+  .chat-mock .ch-av {
+    width: 36px; height: 36px; background: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-d); font-weight: 700; font-size: .85rem;
+  }
+  .chat-mock .ch-head .n { font-weight: 600; font-size: .9rem; }
+  .chat-mock .ch-head .s { font-size: .72rem; color: #9dc9b4; display: flex; align-items: center; gap: 6px; }
+  .chat-mock .ch-head .s::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #9dc9b4; }
+  .chat-mock .ch-body { padding: 22px 18px; display: grid; gap: 10px; background: var(--paper-2); min-height: 280px; align-content: start; }
+  .msg { max-width: 84%; padding: 11px 15px; border-radius: 3px; font-size: .84rem; line-height: 1.45; }
+  .msg.ai { background: #fff; border: 1px solid var(--line); justify-self: start; color: var(--ink-soft); }
+  .msg.me { background: var(--ink); color: var(--paper); justify-self: end; }
+  .msg.ok { background: #eef5f0; border: 1px solid #b9d6c6; color: #1e4d3b; justify-self: start; font-weight: 500; }
+  .msg.typing { color: var(--muted); font-style: italic; }
+  .ch-scene {
+    padding: 12px 18px; border-top: 1px solid var(--line); background: #fff;
+    font-family: var(--font-d); font-size: .7rem; font-weight: 500;
+    letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .ch-scene::before {
+    content: ""; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent); animation: blink 1s ease infinite;
+  }
+  .ch-scene .now { color: var(--accent); }
+  @keyframes blink { 50% { opacity: .25; } }
+  @media (prefers-reduced-motion: reduce) { .ch-scene::before { animation: none; } }
+  .chat-mock .ch-note {
+    padding: 13px 20px; font-size: .72rem; color: var(--muted);
+    border-top: 1px solid var(--line); text-align: center; background: #fff;
+  }
+  @media (max-width: 860px) { .sys-in { grid-template-columns: 1fr; gap: 44px; } }
+
+  /* Auditoría visual — camino del paciente */
+  .audit {
+    display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+    margin-top: 40px;
+  }
+  .audit span {
+    padding: 10px 18px; border: 1px solid var(--line); border-radius: 999px;
+    font-family: var(--font-d); font-size: .82rem; font-weight: 500;
+    color: var(--ink-soft); background: #fff;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  .audit span b { color: var(--accent); font-weight: 700; }
+  .illus {
+    display: inline-block; margin-bottom: 18px; padding: 4px 12px;
+    font-family: var(--font-d); font-size: .68rem; font-weight: 500;
+    letter-spacing: .16em; text-transform: uppercase;
+    background: var(--accent-soft); color: var(--accent); border-radius: 999px;
+  }
+
+  /* Proceso */
+  .steps {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0; margin-top: 60px; border: 1px solid var(--line-d);
+  }
+  .step { padding: 38px 30px; border-left: 1px solid var(--line-d); }
+  .step:first-child { border-left: none; }
+  .step .n { font-family: var(--font-d); font-size: .72rem; font-weight: 500; color: var(--accent); letter-spacing: .2em; }
+  .step h3 { font-family: var(--font-d); font-size: 1.3rem; margin: 14px 0 8px; letter-spacing: -.01em; }
+  .step p { color: var(--muted-d); font-size: .9rem; }
+  @media (max-width: 720px) { .step { border-left: none; border-top: 1px solid var(--line-d); } .step:first-child { border-top: none; } }
+  .steps-note { margin-top: 36px; color: var(--muted-d); font-family: var(--font-d); font-size: 1.05rem; }
+  .steps-note b { color: var(--paper); }
+
+  /* Propuesta — sin precios inventados */
+  .plan-note {
+    margin-top: 34px; padding: 26px 30px; background: var(--accent-soft);
+    border-left: 3px solid var(--accent); font-size: .95rem; color: var(--ink-soft);
+    display: flex; flex-wrap: wrap; gap: 18px; align-items: center; justify-content: space-between;
+  }
+  .plan-note .btn { flex: none; }
+
+  /* FAQ */
+  .faq { max-width: 800px; margin: 52px auto 0; }
+  .faq details { border-top: 1px solid var(--line); }
+  .faq details:last-child { border-bottom: 1px solid var(--line); }
+  .faq summary {
+    padding: 24px 4px; font-family: var(--font-d); font-weight: 500;
+    font-size: 1.05rem; cursor: pointer; letter-spacing: -.01em;
+    list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    transition: color .15s;
+  }
+  .faq summary:hover { color: var(--accent); }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: "+"; font-family: var(--font-d); font-size: 1.4rem;
+    color: var(--accent); font-weight: 400; flex: none; transition: transform .2s;
+  }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq .a { padding: 0 4px 26px; color: var(--muted); font-size: .93rem; max-width: 660px; }
+
+  /* CTA final */
+  .final { background: var(--ink); color: var(--paper); text-align: center; }
+  .final h2 { color: var(--paper); font-size: clamp(2.2rem, 5vw, 3.4rem); }
+  .final .lead2 { color: var(--muted-d); max-width: 580px; margin: 0 auto 12px; font-size: 1.05rem; }
+  .final .nos { color: var(--muted-d); font-size: .9rem; margin-bottom: 40px; }
+  .final .alt { margin-top: 24px; font-size: .86rem; color: var(--muted-d); }
+  .final .alt a { color: var(--accent); text-decoration: none; }
+
+  .cform { max-width: 520px; margin: 0 auto; text-align: left; }
+  .cform .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .cform label {
+    display: block; font-family: var(--font-d); font-size: .68rem;
+    font-weight: 500; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--muted-d); margin: 0 0 8px;
+  }
+  .cform .field { margin-bottom: 16px; }
+  .cform input, .cform textarea {
+    width: 100%; padding: 13px 15px; font: inherit; font-size: .92rem;
+    color: var(--paper); background: rgba(250, 248, 242, .05);
+    border: 1px solid var(--line-d); border-radius: var(--radius);
+    transition: border-color .15s, background .15s;
+  }
+  .cform input:focus, .cform textarea:focus {
+    outline: none; border-color: var(--accent);
+    background: rgba(250, 248, 242, .09);
+  }
+  .cform input::placeholder, .cform textarea::placeholder { color: var(--muted-d); }
+  .cform textarea { resize: vertical; min-height: 110px; }
+  .cform .btn { width: 100%; }
+  .cform-done {
+    display: none; max-width: 520px; margin: 0 auto; padding: 28px 24px;
+    border: 1px solid var(--accent); border-radius: var(--radius);
+    font-family: var(--font-d); font-size: 1.05rem; color: var(--paper);
+  }
+  .cform-done.show { display: block; }
+  .cform-err { color: var(--accent); font-size: .82rem; margin-top: 12px; display: none; }
+  .cform-legal { color: var(--muted-d); font-size: .75rem; margin-top: 14px; text-align: center; }
+  .cform-legal a { color: var(--muted-d); }
+  @media (max-width: 560px) { .cform .row { grid-template-columns: 1fr; } }
+
+  footer { background: var(--ink); border-top: 1px solid var(--line-d); padding: 64px 0 36px; color: var(--muted-d); }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 44px; }
+  .foot-grid h4 {
+    color: var(--paper); font-family: var(--font-d);
+    font-size: .7rem; font-weight: 500; letter-spacing: .2em;
+    text-transform: uppercase; margin-bottom: 18px;
+  }
+  .foot-grid a { display: block; color: var(--muted-d); text-decoration: none; font-size: .86rem; padding: 5px 0; }
+  .foot-grid a:hover { color: var(--accent); }
+  .foot-brand p { font-size: .86rem; margin-top: 16px; max-width: 280px; }
+  .foot-brand .brand { color: var(--paper); }
+  .foot-brand .mark { background: var(--paper); color: var(--ink); }
+  .foot-bottom {
+    margin-top: 52px; padding-top: 26px; border-top: 1px solid var(--line-d);
+    display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between;
+    font-size: .76rem; letter-spacing: .04em;
+  }
+  @media (max-width: 820px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+
+  /* Visibilidad en IA */
+  .rep-mock { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: 10px 10px 0 rgba(224, 66, 10, .12); }
+  .rm-head { display: flex; gap: 12px; align-items: center; padding-bottom: 14px; border-bottom: 1px solid var(--line); margin-bottom: 16px; }
+  .rm-head .mark { width: 30px; height: 30px; background: var(--ink); color: var(--paper); display: flex; align-items: center; justify-content: center; font-family: var(--font-d); font-weight: 700; font-size: .85rem; }
+  .rm-head .n { font-family: var(--font-d); font-weight: 700; font-size: .95rem; }
+  .rm-head .s { color: var(--muted); font-size: .8rem; }
+  .rm-kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 18px; }
+  .rm-kpis div { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; }
+  .rm-kpis b { display: block; font-family: var(--font-d); font-size: 1.7rem; letter-spacing: -.03em; line-height: 1.1; }
+  .rm-kpis b.bad { color: var(--accent-deep); }
+  .rm-kpis span { font-size: .75rem; color: var(--muted); line-height: 1.35; display: block; margin-top: 4px; }
+  .rm-title { font-family: var(--font-d); font-weight: 700; font-size: .85rem; margin-bottom: 10px; }
+  .rm-bars div { display: grid; grid-template-columns: 82px 1fr 22px; align-items: center; gap: 8px; margin-bottom: 7px; font-size: .8rem; }
+  .rm-bars span { color: var(--ink-soft); text-align: right; }
+  .rm-bars i { display: block; height: 14px; background: #cdc6b8; border-radius: 0 4px 4px 0; }
+  .rm-bars em { font-style: normal; font-weight: 600; }
+  .rm-bars .me span { font-weight: 600; color: var(--ink); }
+  .rm-bars .me i { background: var(--accent); }
+  .rep-mock .ch-note { margin-top: 12px; font-size: .72rem; color: var(--muted); }
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 48px; }
+  .facts div { border-top: 3px solid var(--accent); background: #fff; padding: 22px; border-radius: 0 0 var(--radius) var(--radius); }
+  .facts b { display: block; font-family: var(--font-d); font-size: 2.6rem; letter-spacing: -.04em; line-height: 1; margin-bottom: 10px; }
+  .facts span { color: var(--muted); font-size: .92rem; }
+  .facts-src { color: var(--muted); font-size: .78rem; margin: 12px 0 40px; }
+  @media (max-width: 820px) { .facts { grid-template-columns: 1fr; } }
+
+  .rm-bars div { grid-template-columns: 110px 1fr 40px; }
+  .journey.cuatro { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 980px) { .journey.cuatro { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .journey.cuatro { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json" id="ld-tg">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": [
+    "Organization",
+    "ProfessionalService"
+   ],
+   "@id": "https://tunedgrowth.com/#org",
+   "name": "Tuned Growth",
+   "url": "https://tunedgrowth.com/",
+   "logo": "https://tunedgrowth.com/favicon.png",
+   "email": "hola@tunedgrowth.com",
+   "description": "Hacemos que ChatGPT, Gemini y Google recomienden a negocios locales y automatizamos la atención, las citas y el seguimiento para que ninguna consulta se pierda.",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Madrid",
+    "addressCountry": "ES"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "España"
+   },
+   "knowsLanguage": "es"
+  },
+  {
+   "@type": "Service",
+   "@id": "https://tunedgrowth.com/clinicas-dentales/#servicio",
+   "name": "Visibilidad en IA y atención automática para clínicas dentales",
+   "serviceType": "Captación de pacientes para clínicas dentales",
+   "description": "Que ChatGPT, Gemini y Google recomienden tu clínica dental para implantes, ortodoncia invisible y carillas, y que cada consulta acabe en primera visita.",
+   "audience": {
+    "@type": "BusinessAudience",
+    "name": "Clínicas dentales"
+   },
+   "url": "https://tunedgrowth.com/clinicas-dentales/",
+   "provider": {
+    "@id": "https://tunedgrowth.com/#org"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "España"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://tunedgrowth.com/clinicas-dentales/#pagina",
+   "url": "https://tunedgrowth.com/clinicas-dentales/",
+   "name": "Clínicas dentales: más pacientes de implantes y ortodoncia invisible | Tuned Growth",
+   "inLanguage": "es",
+   "isPartOf": {
+    "@id": "https://tunedgrowth.com/#web"
+   },
+   "about": [
+    {
+     "@id": "https://tunedgrowth.com/clinicas-dentales/#servicio"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://tunedgrowth.com/clinicas-dentales/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Por qué empezar por implantes u ortodoncia invisible?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Porque son los tratamientos en los que el paciente más compara y más vale cada paciente nuevo. Si la IA no te nombra ahí, pierdes los casos de mayor valor aunque te recomiende como dentista general."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Me garantizáis que ChatGPT recomiende mi clínica?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No: nadie controla lo que responde la IA. Te garantizamos medirlo cada mes con las mismas preguntas y trabajar todo lo que depende de ti: precios, páginas, reseñas, rankings y directorios."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Tengo que publicar precios?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No es obligatorio, pero la IA tiende a citar a las clínicas que dan un precio «desde». Te enseñamos qué hace tu competencia y decides tú."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Funciona si trabajo con aseguradoras?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí. Además, revisamos qué dice la IA sobre los seguros que aceptas: es una de las preguntas más frecuentes de los pacientes y la IA a menudo lo deduce de directorios desactualizados."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué necesitáis de mi clínica?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Para el diagnóstico, solo el nombre, la web y los tratamientos que más te interesan. Trabajamos con información pública."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cuánto cuesta?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "El diagnóstico es gratis. Después te hacemos una propuesta según los tratamientos y las zonas que quieras trabajar."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="brand" href="/"><span class="mark">TG</span>Tuned Growth</a>
+    <div class="nav-links">
+      <a href="#problema">El problema</a>
+      <a href="#tratamientos">Tratamientos</a>
+      <a href="#servicios">Qué hacemos</a>
+      <a href="#faq">Preguntas</a>
+    </div>
+    <a class="btn btn-primary" href="#contacto">Quiero mi diagnóstico</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Para clínicas dentales</span>
+    <h1>Más pacientes de implantes<br>y <span class="grad-text">ortodoncia invisible.</span></h1>
+    <div class="hero-in" style="margin-top:44px">
+      <div>
+        <p class="lead" style="margin-top:0">Hacemos que ChatGPT, Gemini y Google recomienden tu clínica para los tratamientos que más valen. Y que cada consulta acabe en primera visita.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contacto">Quiero mi diagnóstico gratis</a>
+          <a class="btn btn-outline-d" href="#problema">Ver el problema</a>
+        </div>
+        <p class="hero-note"><b>Primero te lo enseñamos.</b> Preguntamos a la IA lo que preguntan tus pacientes y te mostramos qué clínicas recomienda en tu barrio. <strong>Sin compromiso.</strong></p>
+      </div>
+      <div class="rep-mock reveal" aria-label="Ejemplo de informe">
+        <div class="rm-head"><span class="mark">TG</span><div><div class="n">Visibilidad en IA por tratamiento</div><div class="s">Clínica dental de ejemplo · Madrid</div></div></div>
+        <div class="rm-title">Respuestas de IA que nombran a la clínica</div>
+        <div class="rm-bars">
+          <div><span>Dentista</span><i style="width:57%"></i><em>57 %</em></div>
+          <div class="me"><span>Ortodoncia inv.</span><i style="width:14%"></i><em>14 %</em></div>
+          <div class="me"><span>Implantes</span><i style="width:20%"></i><em>20 %</em></div>
+          <div><span>Carillas</span><i style="width:33%"></i><em>33 %</em></div>
+        </div>
+        <div class="ch-note">Ejemplo ilustrativo con datos ficticios: la clínica sale como «dentista», pero no en sus tratamientos más rentables.</div>
+      </div>
+    </div>
+    <div class="hero-strip">
+      <div><b>Visibilidad en IA</b>ChatGPT, Gemini y Perplexity, tratamiento a tratamiento</div>
+      <div><b>Respuesta inmediata</b>WhatsApp, web y teléfono, también fuera de horario</div>
+      <div><b>Primera visita</b>agendada en la misma conversación</div>
+    </div>
+  </div>
+</header>
+
+<!-- EL PROBLEMA -->
+<section id="problema">
+  <div class="wrap">
+    <div class="sec-num">El problema</div>
+    <h2>El paciente de implantes compara.<br>Y cada vez compara <span class="grad-text">preguntando a la IA.</span></h2>
+    <p class="lead">Un tratamiento de 2.000 a 5.000 € no se decide con el primer resultado. El paciente pregunta, compara precios y opiniones, y la IA le da tres o cinco nombres.</p>
+    <div class="facts reveal">
+      <div><b>5</b><span>clínicas nombró ChatGPT al preguntarle por la mejor clínica dental para implantes en Madrid, entre unas 2.430</span></div>
+      <div><b>25,61 €</b><span>cuesta cada clic en Google Ads para «ortodoncia invisible madrid»; 7,27 € para «implantes dentales madrid»</span></div>
+      <div><b>44 %</b><span>del uso de asistentes de IA en España es Gemini; ChatGPT, el 42 %</span></div>
+    </div>
+    <p class="facts-src">Prueba propia con ChatGPT, Google Maps y Google Ads (vía DataForSEO), noviembre de 2026 · Cuota de uso: StatCounter, octubre de 2026.</p>
+    <div class="leaks reveal">
+      <div class="leak">
+        <div class="flow">Paciente <span class="x">→</span> pregunta a ChatGPT «ortodoncia invisible en mi barrio» <span class="x">→</span> la IA nombra a otras <span class="x">→</span> <b>pide cita en la competencia</b></div>
+        <span class="tag">No apareces</span>
+      </div>
+      <div class="leak">
+        <div class="flow">Paciente <span class="x">→</span> pregunta cuánto cuesta un implante <span class="x">→</span> la IA cita a quien publica precios <span class="x">→</span> <b>tu clínica no entra</b></div>
+        <span class="tag">Sin precios claros</span>
+      </div>
+      <div class="leak">
+        <div class="flow">Paciente <span class="x">→</span> escribe por WhatsApp en hora de consulta <span class="x">→</span> nadie responde <span class="x">→</span> <b>llama a otra clínica</b></div>
+        <span class="tag">Consulta sin respuesta</span>
+      </div>
+      <div class="leak">
+        <div class="flow">Paciente <span class="x">→</span> pide presupuesto de implantes <span class="x">→</span> nadie hace seguimiento <span class="x">→</span> <b>se lo hace en otro sitio</b></div>
+        <span class="tag">Presupuesto olvidado</span>
+      </div>
+      <div class="leak-resolve">
+        Tu clínica puede tener las mejores reseñas del barrio — <b>si la IA no lo sabe y nadie responde a tiempo, el paciente acaba en otra.</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRATAMIENTOS -->
+<section id="tratamientos" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-num">01 — Tratamientos</div>
+    <h2>Medimos y trabajamos<br>cada tratamiento por separado</h2>
+    <p class="lead">Puedes salir como «dentista de barrio» y desaparecer justo donde está el margen.</p>
+    <div class="journey cuatro">
+      <div class="jstep"><span class="n">01</span><h3>Implantes</h3><p>Quién recomienda la IA para implantes y carga inmediata en tu zona, y qué precios cita.</p></div>
+      <div class="jstep"><span class="n">02</span><h3>Ortodoncia invisible</h3><p>Invisalign y alineadores: la palabra más cara del sector dental en Madrid.</p></div>
+      <div class="jstep"><span class="n">03</span><h3>Carillas y estética</h3><p>Pacientes que comparan resultados, precios y opiniones antes de decidir.</p></div>
+      <div class="jstep"><span class="n">04</span><h3>Primera visita y urgencias</h3><p>«Dentista cerca de mí», «cita mañana»: la puerta de entrada de pacientes nuevos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ HACEMOS -->
+<section class="dark" id="servicios">
+  <div class="wrap">
+    <div class="sec-num">02 — Qué hacemos</div>
+    <h2>Que te recomienden.<br>Que nadie se quede sin respuesta.</h2>
+    <p class="lead">Dos piezas del mismo objetivo: más primeras visitas de los tratamientos que te interesan.</p>
+    <div class="tasks">
+      <div class="task"><h3>Informe de visibilidad en IA</h3><p>30 preguntas de pacientes en ChatGPT, Gemini y Perplexity, por tratamiento y barrio.</p></div>
+      <div class="task"><h3>Páginas por tratamiento</h3><p>Precio «desde», proceso, duración, financiación y preguntas reales.</p></div>
+      <div class="task"><h3>Rankings y directorios</h3><p>Presencia en las webs que la IA usa como fuente: Doctoralia, rankings de clínicas, directorios de Invisalign.</p></div>
+      <div class="task"><h3>Reseñas por tratamiento</h3><p>Reseñas que mencionan «implantes» u «ortodoncia invisible», no solo «muy amables».</p></div>
+      <div class="task"><h3>Respuesta inmediata</h3><p>WhatsApp, web y llamadas perdidas con respuesta al momento, también fuera de horario.</p></div>
+      <div class="task"><h3>Primera visita agendada</h3><p>Escáner 3D o valoración gratuita agendada en la misma conversación.</p></div>
+      <div class="task"><h3>Seguimiento de presupuestos</h3><p>El paciente que pidió presupuesto de implantes no desaparece del radar.</p></div>
+      <div class="task"><h3>Medición mensual</h3><p>Repetimos las preguntas y te enseñamos si la IA te recomienda más.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section id="proceso">
+  <div class="wrap">
+    <div class="sec-num">03 — Cómo funciona</div>
+    <h2>Tres pasos</h2>
+    <div class="journey">
+      <div class="jstep"><span class="n">01</span><h3>Diagnóstico gratis</h3><p>Te enseñamos qué clínicas recomienda la IA en tu barrio para tus tratamientos clave.</p></div>
+      <div class="jstep"><span class="n">02</span><h3>Plan de 3 meses</h3><p>Qué arreglar primero en web, fichas, reseñas y atención de consultas.</p></div>
+      <div class="jstep"><span class="n">03</span><h3>Lo hacemos y medimos</h3><p>Aplicamos el plan y cada mes medimos recomendaciones y primeras visitas.</p></div>
+    </div>
+    <div style="margin-top:36px">
+      <a class="btn btn-primary" href="#contacto">Quiero mi diagnóstico gratis</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-num">04 — Preguntas frecuentes</div>
+    <div class="center"><h2>Lo que sueles preguntarte</h2></div>
+    <div class="faq">
+      <details>
+        <summary>¿Por qué empezar por implantes u ortodoncia invisible?</summary>
+        <div class="a">Porque son los tratamientos en los que el paciente más compara y más vale cada paciente nuevo. Si la IA no te nombra ahí, pierdes los casos de mayor valor aunque te recomiende como dentista general.</div>
+      </details>
+      <details>
+        <summary>¿Me garantizáis que ChatGPT recomiende mi clínica?</summary>
+        <div class="a">No: nadie controla lo que responde la IA. Te garantizamos medirlo cada mes con las mismas preguntas y trabajar todo lo que depende de ti: precios, páginas, reseñas, rankings y directorios.</div>
+      </details>
+      <details>
+        <summary>¿Tengo que publicar precios?</summary>
+        <div class="a">No es obligatorio, pero la IA tiende a citar a las clínicas que dan un precio «desde». Te enseñamos qué hace tu competencia y decides tú.</div>
+      </details>
+      <details>
+        <summary>¿Funciona si trabajo con aseguradoras?</summary>
+        <div class="a">Sí. Además, revisamos qué dice la IA sobre los seguros que aceptas: es una de las preguntas más frecuentes de los pacientes y la IA a menudo lo deduce de directorios desactualizados.</div>
+      </details>
+      <details>
+        <summary>¿Qué necesitáis de mi clínica?</summary>
+        <div class="a">Para el diagnóstico, solo el nombre, la web y los tratamientos que más te interesan. Trabajamos con información pública.</div>
+      </details>
+      <details>
+        <summary>¿Cuánto cuesta?</summary>
+        <div class="a">El diagnóstico es gratis. Después te hacemos una propuesta según los tratamientos y las zonas que quieras trabajar.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="final" id="contacto">
+  <div class="wrap">
+    <h2>¿Qué clínica recomienda hoy la IA<br>para <span class="grad-text">implantes en tu barrio?</span></h2>
+    <p class="lead2">Te lo enseñamos gratis, con tus tratamientos y tu zona.</p>
+    <p class="nos">Sin compromiso · Con información pública de tu clínica.</p>
+    <form class="cform" id="cform" action="https://formsubmit.co/ajax/hola@tunedgrowth.com" method="POST" novalidate>
+      <div class="row">
+        <div class="field">
+          <label for="cf-nombre">Nombre</label>
+          <input type="text" id="cf-nombre" name="nombre" required placeholder="Tu nombre">
+        </div>
+        <div class="field">
+          <label for="cf-negocio">Clínica</label>
+          <input type="text" id="cf-negocio" name="negocio" placeholder="Nombre de la clínica">
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" required placeholder="tu@email.com">
+        </div>
+        <div class="field">
+          <label for="cf-tel">Teléfono</label>
+          <input type="tel" id="cf-tel" name="telefono" placeholder="600 000 000">
+        </div>
+      </div>
+      <div class="field">
+        <label for="cf-web">Web y tratamiento que más te interesa</label>
+        <input type="text" id="cf-web" name="web" placeholder="tuclinica.com — implantes, ortodoncia invisible, carillas…">
+      </div>
+      <input type="hidden" name="_subject" value="Diagnóstico clínica dental — tunedgrowth.com/clinicas-dentales">
+      <input type="text" name="_honey" style="display:none">
+      <button type="submit" class="btn btn-light" id="cf-submit">Quiero mi diagnóstico</button>
+      <p class="cform-legal">Al enviar aceptas la <a href="/privacidad.html">política de privacidad</a> — solo usamos tus datos para preparar tu diagnóstico.</p>
+      <p class="cform-err" id="cf-err">Algo ha fallado — escríbenos a hola@tunedgrowth.com</p>
+    </form>
+    <div class="cform-done" id="cf-done">
+      ✓ Recibido — preparo el diagnóstico de tu clínica y te escribo en menos de 24h laborables.
+    </div>
+    <p class="alt">¿Prefieres escribir directamente? <a href="mailto:hola@tunedgrowth.com?subject=Diagn%C3%B3stico%20cl%C3%ADnica%20dental">hola@tunedgrowth.com</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="/"><span class="mark">TG</span>Tuned Growth</a>
+        <p>Hacemos que la IA recomiende tu clínica dental y que cada consulta acabe en primera visita.</p>
+      </div>
+      <div>
+        <h4>Servicios</h4>
+        <a href="/visibilidad-ia/">Visibilidad en IA</a>
+        <a href="/#sistema">Captación y atención automática</a>
+      </div>
+      <div>
+        <h4>Sectores</h4>
+        <a href="/clinicas-dentales/">Clínicas dentales</a>
+        <a href="/clinicas/">Clínicas privadas</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <a href="mailto:hola@tunedgrowth.com">hola@tunedgrowth.com</a>
+        <a href="#contacto">Pedir diagnóstico</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Tuned Growth · Madrid</span>
+      <span><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a> · <a href="/cookies.html">Cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: .15 });
+  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+  // ── Formulario → hola@tunedgrowth.com ──
+  const cf = document.getElementById("cform");
+  if (cf) cf.addEventListener("submit", async e => {
+    e.preventDefault();
+    if (!cf.checkValidity()) { cf.reportValidity(); return; }
+    const btn = document.getElementById("cf-submit");
+    const err = document.getElementById("cf-err");
+    btn.disabled = true; btn.textContent = "Enviando…"; err.style.display = "none";
+    try {
+      const r = await fetch(cf.action, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(Object.fromEntries(new FormData(cf))),
+      });
+      const d = await r.json();
+      if (!r.ok || d.success === "false") throw new Error();
+      cf.style.display = "none";
+      document.getElementById("cf-done").classList.add("show");
+    } catch {
+      err.style.display = "block";
+      btn.disabled = false; btn.textContent = "Quiero mi diagnóstico";
+    }
+  });
+</script>
+</body>
+</html>

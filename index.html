@@ -3,14 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tuned Growth — Tu negocio puede hacer más. Sin hacer más tú.</title>
+<title>Tuned Growth — Que la IA te recomiende y ninguna consulta se pierda</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<meta name="description" content="Automatizamos captación, atención, ventas y seguimiento para que tu negocio genere más reduciendo la carga de trabajo de tu equipo. Primero lo pruebas, después decides.">
+<meta name="description" content="Hacemos que ChatGPT, Gemini y Google recomienden tu negocio y automatizamos la atención, las citas y el seguimiento para que ninguna consulta se pierda. Primero lo pruebas, después decides.">
+<meta property="og:title" content="Tuned Growth — Que la IA te recomiende y ninguna consulta se pierda">
+<meta property="og:description" content="Hacemos que ChatGPT, Gemini y Google recomienden tu negocio y automatizamos la atención, las citas y el seguimiento. Primero lo pruebas, después decides.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tunedgrowth.com/">
+<link rel="canonical" href="https://tunedgrowth.com/">
 <style>
   :root {
     --paper: #f3f0e9;
@@ -359,6 +364,11 @@
   .sector-card a::after { content: " →"; }
   .sector-card a:hover { color: var(--accent-deep); }
   .sector-miss { text-align: center; margin-top: 44px; color: var(--muted); font-size: .98rem; }
+  .svc { position: relative; }
+  .svc-tag { position: absolute; top: 18px; right: 18px; background: var(--accent); color: #fff; font-family: var(--font-d); font-size: .62rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; padding: 5px 9px; border-radius: var(--radius); }
+  .svc-list { list-style: none; margin: 4px 0 22px; font-size: .88rem; color: var(--ink-soft); }
+  .svc-list li { padding: 7px 0 7px 22px; border-top: 1px solid var(--line); position: relative; }
+  .svc-list li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
   .sector-miss a { color: var(--accent); text-decoration: none; font-weight: 500; }
 
   /* Integraciones */
@@ -606,6 +616,155 @@
   .reveal.in { opacity: 1; transform: none; }
   @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
 </style>
+<script type="application/ld+json" id="ld-tg">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": [
+    "Organization",
+    "ProfessionalService"
+   ],
+   "@id": "https://tunedgrowth.com/#org",
+   "name": "Tuned Growth",
+   "url": "https://tunedgrowth.com/",
+   "logo": "https://tunedgrowth.com/favicon.png",
+   "email": "hola@tunedgrowth.com",
+   "description": "Hacemos que ChatGPT, Gemini y Google recomienden a negocios locales y automatizamos la atención, las citas y el seguimiento para que ninguna consulta se pierda.",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Madrid",
+    "addressCountry": "ES"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "España"
+   },
+   "knowsLanguage": "es"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://tunedgrowth.com/#web",
+   "url": "https://tunedgrowth.com/",
+   "name": "Tuned Growth",
+   "inLanguage": "es",
+   "publisher": {
+    "@id": "https://tunedgrowth.com/#org"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://tunedgrowth.com/visibilidad-ia/#servicio",
+   "name": "Visibilidad en IA",
+   "serviceType": "Auditoría y mejora de visibilidad en asistentes de IA (ChatGPT, Gemini, Perplexity)",
+   "description": "Medimos si los asistentes de IA recomiendan tu negocio con 30 preguntas reales de clientes, quién sale en tu lugar y qué cambiar. Informe con plan de 3 meses y medición mensual. Diagnóstico inicial gratuito.",
+   "url": "https://tunedgrowth.com/visibilidad-ia/",
+   "provider": {
+    "@id": "https://tunedgrowth.com/#org"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "España"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://tunedgrowth.com/#servicio-atencion",
+   "name": "Captación y atención automática",
+   "serviceType": "Automatización de atención al cliente, citas y seguimiento",
+   "description": "Sistema que responde al instante por WhatsApp, web y teléfono, agenda citas, envía recordatorios y hace seguimiento, también fuera de horario. Demo con tu negocio antes de decidir.",
+   "url": "https://tunedgrowth.com/#sistema",
+   "provider": {
+    "@id": "https://tunedgrowth.com/#org"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "España"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://tunedgrowth.com/#pagina",
+   "url": "https://tunedgrowth.com/",
+   "name": "Tuned Growth — Que la IA te recomiende y ninguna consulta se pierda",
+   "inLanguage": "es",
+   "isPartOf": {
+    "@id": "https://tunedgrowth.com/#web"
+   },
+   "about": [
+    {
+     "@id": "https://tunedgrowth.com/visibilidad-ia/#servicio"
+    },
+    {
+     "@id": "https://tunedgrowth.com/#servicio-atencion"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://tunedgrowth.com/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Qué es la visibilidad en IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Es cuántas veces ChatGPT, Gemini o Perplexity recomiendan tu negocio cuando un cliente les pregunta por lo que ofreces. Te enseñamos gratis qué dicen hoy de ti. Ver el servicio"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Tengo que cambiar mi CRM?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No necesariamente. Diseñamos la implementación alrededor de las herramientas que ya utilizas cuando es viable."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿La IA sustituye a mi equipo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No es necesario plantearlo así. El objetivo es automatizar tareas repetitivas y permitir que el equipo se concentre en las interacciones que requieren intervención humana."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Funciona fuera del horario comercial?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí. Precisamente uno de los principales casos de uso es atender consultas cuando el equipo no está disponible."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Puedo probarlo antes?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí — es nuestro argumento central: primero construimos una demo personalizada con tu negocio y después decides."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cuánto cuesta?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Depende del número de canales, integraciones y procesos que quieras automatizar. Te damos una propuesta después de analizar el caso."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Y si no sé exactamente qué necesito?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Perfecto. Esa es precisamente la función del análisis inicial."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -613,9 +772,10 @@
   <div class="wrap nav-in">
     <a class="brand" href="#"><span class="mark">TG</span>Tuned Growth</a>
     <div class="nav-links">
-      <a href="#fugas">El problema</a>
+      <a href="#servicios">Servicios</a>
+      <a href="/visibilidad-ia/">Visibilidad en IA</a>
       <a href="#sistema">El sistema</a>
-      <a href="#sectores">Sectores</a>
+      <a href="/clinicas/">Clínicas</a>
       <a href="#faq">FAQ</a>
     </div>
     <a class="btn btn-primary" href="#contacto">Quiero mi demo</a>
@@ -625,14 +785,14 @@
 <!-- HERO — claim nuevo -->
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow">Sistemas de captación y atención automática</span>
+    <span class="eyebrow">Visibilidad en IA · Captación y atención automática</span>
     <h1>Tu negocio puede <span class="grad-text">hacer más.</span><br><span class="u">Sin hacer más tú.</span></h1>
     <div class="hero-in" style="margin-top:44px">
       <div>
-        <p class="lead" style="margin-top:0">Automatizamos captación, atención, ventas y seguimiento para que tu negocio genere más reduciendo la carga de trabajo de tu equipo.</p>
+        <p class="lead" style="margin-top:0">Hacemos que ChatGPT, Gemini y Google recomienden tu negocio. Y automatizamos la atención, las citas y el seguimiento para que ninguna consulta se pierda.</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#contacto">Quiero ver mi demo</a>
-          <a class="btn btn-outline-d" href="#fugas">Ver qué podría automatizar</a>
+          <a class="btn btn-outline-d" href="#servicios">Ver los servicios</a>
         </div>
         <p class="hero-note"><b>Primero lo pruebas. Después decides.</b> Analizamos tu negocio y te enseñamos una versión funcionando con tus propios servicios, horarios y datos. <strong>Sin compromiso.</strong></p>
       </div>
@@ -663,31 +823,77 @@
   </div>
 </div>
 
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-num">Servicios</div>
+    <h2>Que te encuentren.<br><span class="grad-text">Que te respondan.</span></h2>
+    <p class="lead">Dos servicios que se complementan: el primero trae clientes, el segundo hace que ninguno se pierda.</p>
+    <div class="sectors">
+      <div class="sector-card svc reveal">
+        <span class="svc-tag">Nuevo</span>
+        <div class="icon">✦</div>
+        <h3>Visibilidad en IA</h3>
+        <p>Medimos si ChatGPT, Gemini y Perplexity recomiendan tu negocio, quién sale en tu lugar y qué cambiar para que te recomienden a ti.</p>
+        <ul class="svc-list">
+          <li>Diagnóstico gratis de lo que dice la IA de ti</li>
+          <li>Informe con tu competencia y plan de 3 meses</li>
+          <li>Medición mensual del avance</li>
+        </ul>
+        <a href="/visibilidad-ia/">Ver el servicio</a>
+      </div>
+      <div class="sector-card svc reveal">
+        <div class="icon">⚡</div>
+        <h3>Captación y atención automática</h3>
+        <p>Un sistema que responde al instante por WhatsApp, web y teléfono, agenda citas y hace seguimiento, también fuera de horario.</p>
+        <ul class="svc-list">
+          <li>Respuesta en segundos, 24/7</li>
+          <li>Citas, recordatorios y reseñas</li>
+          <li>Demo con tu negocio antes de decidir</li>
+        </ul>
+        <a href="#sistema">Ver cómo funciona</a>
+      </div>
+      <div class="sector-card svc reveal">
+        <div class="icon">🦷</div>
+        <h3>Para clínicas privadas</h3>
+        <p>Los dos servicios adaptados a clínicas: que la IA recomiende tu clínica y que cada consulta acabe en cita.</p>
+        <ul class="svc-list">
+          <li>Dental, estética, dermatología, fisioterapia…</li>
+          <li>Tratamientos, precios y agenda reales</li>
+          <li>Sin aumentar tu equipo</li>
+        </ul>
+        <a href="/clinicas-dentales/">Clínicas dentales</a>
+        <a href="/clinicas/" style="margin-top:8px">Otras clínicas privadas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FUGAS -->
 <section id="fugas">
   <div class="wrap">
     <div class="sec-num">El problema</div>
     <h2>¿Cuántos clientes estás perdiendo<br>sin darte cuenta?</h2>
-    <p class="lead">No hace falta que tu web sea mala. Basta con que una consulta se quede sin respuesta para que el cliente llame al siguiente resultado de Google.</p>
+    <p class="lead">No hace falta que tu web sea mala. Basta con que la IA recomiende a otro, o con que una consulta se quede sin respuesta, para que el cliente acabe en la competencia.</p>
     <div class="leaks reveal">
       <div class="leak">
-        <div class="flow">Cliente <span class="x">→</span> WhatsApp <span class="x">→</span> nadie responde <span class="x">→</span> <b>cliente desaparece</b></div>
+        <div class="flow">Cliente <span class="x">→</span> pregunta a ChatGPT o Gemini <span class="x">→</span> la IA recomienda a otro <span class="x">→</span> <b>nunca te encuentra</b></div>
         <span class="tag">Fuga nº 1</span>
       </div>
       <div class="leak">
-        <div class="flow">Cliente <span class="x">→</span> llama fuera de horario <span class="x">→</span> buzón <span class="x">→</span> <b>cliente desaparece</b></div>
+        <div class="flow">Cliente <span class="x">→</span> WhatsApp <span class="x">→</span> nadie responde <span class="x">→</span> <b>cliente desaparece</b></div>
         <span class="tag">Fuga nº 2</span>
       </div>
       <div class="leak">
-        <div class="flow">Cliente <span class="x">→</span> rellena el formulario web <span class="x">→</span> nadie contesta <span class="x">→</span> <b>desaparece</b></div>
+        <div class="flow">Cliente <span class="x">→</span> llama fuera de horario <span class="x">→</span> buzón <span class="x">→</span> <b>cliente desaparece</b></div>
         <span class="tag">Fuga nº 3</span>
       </div>
       <div class="leak">
-        <div class="flow">Cliente <span class="x">→</span> pide presupuesto <span class="x">→</span> nadie hace seguimiento <span class="x">→</span> <b>desaparece</b></div>
+        <div class="flow">Cliente <span class="x">→</span> rellena el formulario web <span class="x">→</span> nadie contesta <span class="x">→</span> <b>desaparece</b></div>
         <span class="tag">Fuga nº 4</span>
       </div>
       <div class="leak">
-        <div class="flow">Cliente <span class="x">→</span> comenta en Google/reseñas <span class="x">→</span> sin respuesta <span class="x">→</span> <b>no vuelve</b></div>
+        <div class="flow">Cliente <span class="x">→</span> pide presupuesto <span class="x">→</span> nadie hace seguimiento <span class="x">→</span> <b>desaparece</b></div>
         <span class="tag">Fuga nº 5</span>
       </div>
       <div class="leak">
@@ -703,7 +909,7 @@
         <span class="tag">Fuga nº 8</span>
       </div>
       <div class="leak-resolve">
-        Tuned Growth <b>automatiza esos puntos de fuga</b> — cada consulta respondida, cada llamada atendida, cada contacto con seguimiento.
+        Tuned Growth <b>cierra esos puntos de fuga</b> — que la IA te recomiende, y que cada consulta sea respondida, cada llamada atendida y cada contacto tenga seguimiento.
       </div>
     </div>
   </div>
@@ -755,7 +961,7 @@
     <h2>Un sistema que acompaña<br>toda la venta</h2>
     <p class="lead">No son servicios sueltos. Es un recorrido completo: desde que alguien te encuentra hasta que vuelve.</p>
     <div class="journey">
-      <div class="jstep"><span class="n">01</span><h3>Captamos</h3><p>Web, Google, anuncios, formularios y WhatsApp.</p></div>
+      <div class="jstep"><span class="n">01</span><h3>Captamos</h3><p>Web, Google, anuncios, formularios, WhatsApp y asistentes de IA como ChatGPT.</p></div>
       <div class="jstep"><span class="n">02</span><h3>Respondemos</h3><p>El cliente recibe una respuesta inmediata, incluso fuera de horario.</p></div>
       <div class="jstep"><span class="n">03</span><h3>Cualificamos</h3><p>El sistema hace las preguntas necesarias y detecta si la oportunidad tiene sentido.</p></div>
       <div class="jstep"><span class="n">04</span><h3>Convertimos</h3><p>Reserva, llamada, presupuesto o compra.</p></div>
@@ -937,6 +1143,10 @@
     <div class="center"><h2>Lo que sueles preguntarte</h2></div>
     <div class="faq">
       <details>
+        <summary>¿Qué es la visibilidad en IA?</summary>
+        <div class="a">Es cuántas veces ChatGPT, Gemini o Perplexity recomiendan tu negocio cuando un cliente les pregunta por lo que ofreces. Te enseñamos gratis qué dicen hoy de ti. <a href="/visibilidad-ia/">Ver el servicio →</a></div>
+      </details>
+      <details>
         <summary>¿Tengo que cambiar mi CRM?</summary>
         <div class="a">No necesariamente. Diseñamos la implementación alrededor de las herramientas que ya utilizas cuando es viable.</div>
       </details>
@@ -1034,13 +1244,14 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a class="brand" href="#"><span class="mark">TG</span>Tuned Growth</a>
-        <p>Automatizamos captación, atención, ventas y seguimiento — tu negocio hace más sin que tú hagas más.</p>
+        <p>Hacemos que la IA recomiende tu negocio y automatizamos la atención y el seguimiento — tu negocio hace más sin que tú hagas más.</p>
       </div>
       <div>
-        <h4>Soluciones</h4>
-        <a href="#fugas">El problema</a>
-        <a href="#sistema">El sistema</a>
-        <a href="#calculadora">Calculadora</a>
+        <h4>Servicios</h4>
+        <a href="/visibilidad-ia/">Visibilidad en IA</a>
+        <a href="#sistema">Captación y atención automática</a>
+        <a href="/clinicas-dentales/">Clínicas dentales</a>
+        <a href="/clinicas/">Clínicas privadas</a>
       </div>
       <div>
         <h4>Empresa</h4>
