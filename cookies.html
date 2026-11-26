@@ -44,33 +44,43 @@
   <span class="eyebrow">Legal</span>
   <h1>Política de cookies</h1>
 
-  <h2>Este sitio no usa cookies</h2>
-  <p>tunedgrowth.com es un sitio informativo que <strong>no instala
-  cookies</strong> propias ni de terceros en tu navegador: no hay analítica,
-  no hay publicidad, no hay seguimiento y no hay banner de consentimiento
-  porque no hay nada que consentir.</p>
+  <h2>Qué medimos y cómo</h2>
+  <p>Usamos <strong>PostHog</strong> (servidores en la Unión Europea) para
+  entender cómo se usa la web: de dónde llegan las visitas, qué páginas se ven
+  y dónde se hace clic. Funciona de dos maneras según tu elección:</p>
+  <ul>
+    <li><strong>Si no aceptas o rechazas:</strong> medición anónima
+    <strong>sin cookies</strong> y sin guardar nada en tu navegador (visitas,
+    página de origen, país aproximado). No se graban sesiones.</li>
+    <li><strong>Si aceptas:</strong> PostHog guarda un identificador en tu
+    navegador (cookie <code>ph_*</code> y almacenamiento local, hasta 1 año)
+    para reconocer visitas repetidas, y graba de forma anónima la navegación
+    (clics y desplazamiento, con los campos de formulario ocultos) para
+    mejorar la web. Las grabaciones se conservan 30 días.</li>
+  </ul>
+  <p>Guardamos tu elección en tu navegador (<code>tg_cookies</code>) para no
+  volver a preguntarte. Puedes cambiarla cuando quieras:
+  <a href="#" onclick="window.tgCookies && tgCookies(); return false;">cambiar mis preferencias de cookies</a>.</p>
 
   <h2>Servicios externos</h2>
   <ul>
     <li><strong>Google Fonts:</strong> las tipografías se cargan desde los
     servidores de Google, que reciben tu dirección IP para servir los
     archivos (igual que cualquier recurso web). No instala cookies.</li>
-    <li><strong>GitHub Pages:</strong> el sitio se sirve desde GitHub, que
-    puede registrar datos técnicos de conexión según su propia política.</li>
+    <li><strong>GitHub Pages y Cloudflare:</strong> el sitio se sirve desde
+    GitHub a través de Cloudflare, que pueden registrar datos técnicos de
+    conexión según su propia política.</li>
+    <li><strong>jsDelivr:</strong> desde ahí se carga el código de PostHog.</li>
     <li><strong>FormSubmit:</strong> el formulario de contacto envía los
-    datos por correo electrónico; no utiliza cookies.</li>
+    datos por correo electrónico a hola@tunedgrowth.com; no utiliza cookies.</li>
   </ul>
 
-  <h2>Si esto cambia</h2>
-  <p>Si en el futuro incorporamos cookies o herramientas de medición,
-  actualizaremos esta página y, cuando la ley lo exija, solicitaremos tu
-  consentimiento previo.</p>
-
-  <p class="muted">Última actualización: abril de 2026.</p>
+  <p class="muted">Última actualización: noviembre de 2026.</p>
 </main>
 <footer><div class="wrap">
   <span>© 2026 Tuned Growth · Madrid</span>
   <span><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a> · <a href="/cookies.html">Cookies</a></span>
 </div></footer>
+<script type="module" src="/assets/analitica.js"></script>
 </body>
 </html>

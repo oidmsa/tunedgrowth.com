@@ -958,11 +958,13 @@
       if (!r.ok || d.success === "false") throw new Error();
       cf.style.display = "none";
       document.getElementById("cf-done").classList.add("show");
+      window.posthog && posthog.capture("formulario_enviado", { pagina: location.pathname });
     } catch {
       err.style.display = "block";
       btn.disabled = false; btn.textContent = "Quiero mi diagnóstico";
     }
   });
 </script>
+<script type="module" src="/assets/analitica.js"></script>
 </body>
 </html>
